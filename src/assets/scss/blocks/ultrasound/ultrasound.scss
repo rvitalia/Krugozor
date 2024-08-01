@@ -1,0 +1,98 @@
+.ultrasound {
+
+    & .project_title {
+        text-align: left;
+    }
+
+    & .grid-row {
+        margin-top: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+
+        & li.--accent {
+            background-color: var(--accent-color);
+        }
+
+        & li.--darkblue {
+            background-color: var(--darkblue-color);
+        }
+
+        & li.--large {
+            grid-column: 7 span;
+            @include tablet{
+                grid-column: 6 span;
+            }
+            @include mobile{
+                grid-column: 12 span;
+            }
+        }
+
+        & li.--medium {
+            grid-column: 5 span;
+            @include tablet{
+                grid-column: 6 span;
+            }
+            @include mobile{
+                grid-column: 12 span;
+            }
+        }
+        & li.--small {
+            grid-column: 3 span;
+            @include tablet{
+                grid-column: 6 span;
+            }
+            @media (max-width: 480px){
+                grid-column: 12 span;
+            }
+        }
+        & li.--base {
+            grid-column: 4 span;
+            @include tablet{
+                grid-column: 6 span;
+            }
+            @media (max-width: 480px){
+                grid-column: 12 span;
+            }
+        }
+        & li.--ultra {
+            grid-column: 2 span;
+            @include tablet{
+                grid-column: 6 span;
+            }
+            @media (max-width: 480px){
+                grid-column: 12 span;
+            }
+        }
+
+        & li:last-child{
+            @include tablet{
+                grid-column: 12 span;
+            }
+            @include mobile {
+                grid-column: 6 span;
+            }
+            @media (max-width: 480px){
+                grid-column: 12 span;
+            }
+        }
+
+        & .ultrasound_item {
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: clamp(16px, 2.1vw ,24px);
+            letter-spacing: 0.17em;
+            text-align: center;
+            color: #fff;
+            padding: clamp(16px, 2.3vw, 38px) clamp(12.5px, 1.9vw, 25px);
+            border-radius: 30px;
+            white-space: wrap;
+            min-height: clamp(120px, 12vw ,179px);
+       
+            @include mobile{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

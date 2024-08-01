@@ -1,0 +1,76 @@
+.license {
+    & .project_title {
+        text-align: left;
+        margin-bottom: clamp(50px, 4vw, 63px);
+    }
+
+    & .grid-row {
+        grid-template-columns: repeat(12, 1fr);
+
+        @include for-desktop {
+            position: relative;
+        }
+    }
+
+    .license_item {
+        grid-column: 8 span;
+
+        @include for-desktop {
+            grid-column: 10 span;
+        }
+
+        @include tablet{
+            grid-column: 12 span;
+        }
+
+        & p {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: clamp(15px, 2.7vw, 24px);
+            letter-spacing: 0.03em;
+
+            & b,
+            & strong {
+                display: block;
+                font-weight: 700;
+            }
+        }
+
+        & .project_link {
+            display: block;
+
+            @include mobile{
+                border-radius: 35px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            &+p {
+                margin-top: clamp(50px, 4vw, 62px);
+            }
+        }
+    }
+
+    & .img-wrap {
+        grid-column: 4 span;
+        margin-right: -17%;
+        margin-top: -10%;
+
+        @include for-desktop {
+            margin: 0;
+            grid-column: unset;
+            position: absolute;
+            right: 0;
+            top: -20%;
+            z-index: 0;
+            opacity: 0.3;
+            filter: blur(6px);
+        }
+
+        @include mobile{
+            display: none;
+        }
+    }
+}

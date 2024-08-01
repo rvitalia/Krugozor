@@ -1,0 +1,88 @@
+.why_inner {
+    border: 1.50px solid #000;
+    border-radius: 30px;
+    padding: 86px 80px 60px 120px;
+
+    @media (max-width:1300px) {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    @include small-tablet{
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+
+    & .project_title-main {
+        position: relative;
+        display: block;
+        margin-bottom: clamp(20px, 7vw ,100px);
+        max-width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include small-tablet{
+            max-width: 300px;
+            text-align: center;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -43px;
+            right: 0;
+            top: -58px;
+            bottom: -32px;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('data:image/svg+xml,%3Csvg%20width=%22988%22%20height=%22176%22%20viewBox=%220%200%20988%20176%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M986.699%2021.623C986.919%2023.2596%20986.429%2025.0592%20985.09%2027.0507C983.747%2029.049%20981.588%2031.1802%20978.597%2033.4256C972.616%2037.9157%20963.486%2042.732%20951.481%2047.7826C927.486%2057.8776%20892.224%2068.8194%20848.273%2079.9444C760.385%20102.191%20637.892%20125.135%20501.63%20143.498C365.369%20161.861%20241.172%20172.161%20150.53%20173.973C105.202%20174.88%2068.3016%20173.662%2042.4904%20170.279C29.5767%20168.587%2019.4975%20166.359%2012.541%20163.613C9.06216%20162.239%206.4159%20160.756%204.59168%20159.184C2.77363%20157.618%201.82417%20156.012%201.60363%20154.376C1.38308%20152.739%201.87366%20150.94%203.21227%20148.948C4.55542%20146.95%206.71457%20144.819%209.70569%20142.573C15.687%20138.083%2024.817%20133.267%2036.8219%20128.216C60.8168%20118.121%2096.0786%20107.179%20140.029%2096.0545C227.917%2073.8079%20350.411%2050.8639%20486.672%2032.5011C622.934%2014.1383%20747.131%203.83796%20837.773%202.02556C883.101%201.11923%20920.001%202.33644%20945.812%205.71945C958.726%207.41201%20968.805%209.63967%20975.762%2012.3863C979.24%2013.7598%20981.887%2015.2433%20983.711%2016.8148C985.529%2018.3809%20986.478%2019.9864%20986.699%2021.623Z%22%20stroke=%22#0065B2%22%20stroke-width=%222%22%20/%3E%20%3C/svg%3E');
+            
+            @include small-tablet{
+                bottom: 0;
+                top: 0;
+                left: -60px;
+                right: -60px;
+
+            }
+            @include mobile{
+                left: -15px;
+                right: -15px;
+            }
+        }
+    }
+}
+
+.why_inner_list {
+    display: flex;
+    gap: 25px;
+    row-gap: clamp(30px, 4.5vw ,60px);
+    flex-wrap: wrap;
+
+    @include tablet{
+        flex-direction: column;
+        row-gap: unset;
+        gap: 20px;
+    }
+
+    & li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        flex: 1 0 calc(50% - 25px);
+        font-weight: 500;
+        font-size: clamp(18px, 2.5vw, 26px);
+        letter-spacing: 0.12em;
+        color: #000;
+
+        @include tablet{
+            align-items: center;
+        }
+
+        & img{
+            @include tablet{
+                max-width: 24px;
+            }
+        }
+    }
+}

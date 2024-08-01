@@ -1,0 +1,41 @@
+.parents {
+    & .grid-row {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    & li {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &.--regular {
+            grid-column: 4 span;
+
+            @include small-tablet {
+                grid-column: 6 span;
+            }
+
+            @include mobile{
+                grid-column: 12 span;
+            }
+        }
+
+        &:nth-child(3){
+            @include small-tablet{
+                grid-column: 12 span;
+            }
+        }
+
+        &.--big {
+            grid-column: 8 span;
+
+            @include small-tablet {
+                grid-column: 12 span;
+            }
+        }
+
+        &.--rose {
+            background-color: var(--rose-color);
+            color: white;
+        }
+    }
+}

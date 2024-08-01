@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const burgerMenu = document.getElementById('burger-menu');
+    const headerMobile = document.getElementById('header-mobile');
+
+    burgerMenu.addEventListener('click', function () {
+        burgerMenu.classList.toggle('active');
+        headerMobile.classList.toggle('active');
+    });
+
+    const body = document.body;
+    const inner = document.querySelector('.container'); // или другой элемент, в котором нужно вычислить ширину
+    const scrollBarWidth = window.innerWidth - body.clientWidth;
+    document.documentElement.style.setProperty('--scrollbar-width', `${scrollBarWidth}px`);
+});

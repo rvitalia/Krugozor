@@ -1,0 +1,210 @@
+.price {
+    & .swiper-wrapper{
+        align-items: stretch;
+    }
+
+    & .swiper-slide {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        & .hero_wrapper{
+            flex-grow: 1;
+        }
+
+        & .project_link {
+            width: 100%;
+            max-width: 481px;
+            text-align: center;
+        }
+
+        & .swiper_slide_mobile {
+            &.--orange {
+                background-color: var(--orange-color);
+                margin-left: auto;
+                margin-right: auto;
+                color: white;
+            }
+
+            &.--rose{
+                background-color: var(--rose-color);
+                margin-left: auto;
+                margin-right: auto;
+                color: white;
+            }
+        }
+
+        & .hero_wrapper.--orange {
+            background-color: var(--orange-color);
+            position: relative;
+            overflow: hidden;
+
+
+            & .container {
+                min-height: 477px;
+
+                @include tablet {
+                    padding: 29px 22px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                @include small-tablet {
+                    padding-bottom: 0;
+                }
+
+                & .project_link {
+                    display: block;
+                    width: 100%;
+                    max-width: clamp(400px, 32vw, 481px);
+                    text-align: center;
+
+                    @include small-tablet {
+                        display: none;
+                    }
+                }
+
+                & .hero_desc {
+                    margin-bottom: 44px;
+                    font-size: clamp(20px, 2vw, 26px);
+
+                    @include tablet {
+                        & br {
+                            display: none;
+                        }
+                    }
+
+                    @include mobile {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            & .hero_object {
+                width: 100%;
+                max-height: unset;
+                top: 0;
+                bottom: 0;
+                right: -5%;
+                transform: unset;
+                height: 100%;
+                max-width: clamp(397px, 51vw, 831px);
+
+                @include small-tablet {
+                    top: unset;
+                    max-height: 366px;
+                }
+
+                @include mobile {
+                    top: 20%;
+                    bottom: unset;
+                }
+            }
+
+            & .hero_boy {
+                max-width: clamp(323px, 26vw, 399px);
+                max-height: 454px;
+                right: 8%;
+
+                @include tablet {
+                    right: 0;
+                }
+            }
+        }
+
+        & .hero_wrapper.--rose{
+            background-color: var(--rose-color);
+
+            & .container{
+                padding-top: 50px;
+                padding-bottom: 50px;
+                min-height: 477px;
+                overflow: hidden;
+
+                @include tablet{
+                    padding-bottom: 0;
+                    padding-top: 29px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                @include small-tablet{
+                    height: 100%;
+                    justify-content: space-between;
+                }
+            }
+
+            & .hero_desc{
+                max-width: 700px;
+
+                @media (max-width:1020px){
+                    max-width: 570px;
+                }
+                @media (max-width:840px) {
+                    max-width: 540px;
+                }
+                @include small-tablet{
+                    max-width: 345px;
+                }
+            }
+
+            & .project_link{
+                max-width: 481px;
+                width: 100%;
+                display: block;
+
+                @media (max-width:840px) {
+                    max-width: 450px;
+                }
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            & .hero_object{
+                transform: unset;
+                right: -208px;
+                top: -145px;
+                width: 100%;
+                max-width: 852px;
+                max-height: 750px;
+                object-fit: cover;
+            
+                @media (max-width: 1250px) {
+                    right: -380px;
+                }
+
+                @media (max-width:840px) {
+                    display: none;
+                }
+         
+                &.--mobile{
+                    display: none;
+
+                    @media (max-width:840px) {
+                        display: block;
+                        max-width: 397px;
+                        max-height: 366px;
+                        right: -20%;
+                        bottom: 0;
+                        top: unset;
+                        // object-fit: contain;
+                    }
+                }
+            }
+            & .hero_boy{
+                @include tablet{
+                    max-width: 378px;
+                }
+            }
+        }
+    }
+}
+
+.hero_wrapper {
+    @include mobile {
+        border-radius: 0 0 0 40px;
+    }
+}

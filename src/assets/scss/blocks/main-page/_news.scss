@@ -1,0 +1,134 @@
+.news {
+    background-color: var(--accent-color);
+    padding: clamp(26px, 3vw ,32px) 0 clamp(30px, 4.3vw, 66px);
+
+    & .container{
+        @include small-tablet{
+            padding: 0;
+        }
+    }
+
+    & .accordion {
+        width: 100%;
+        padding-top: 33px;
+    }
+
+    & .accordion-item {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+    }
+
+    & .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+
+        @include small-tablet{
+            border-radius: unset;
+            background-color: var(--accent-color);
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        & svg{
+            transform: rotate(-90deg);
+            stroke: #0065B2;
+
+            @include small-tablet{
+                stroke: #fff;
+                width: 21px;
+                height: 10px;
+            }
+        }
+    }
+
+    & .accordion-header_top {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @include small-tablet{
+            flex-direction: column-reverse;
+            gap: 4px;
+            align-items: flex-start;
+        }
+
+        & span {
+            font-weight: 700;
+            font-size: clamp(10px, 3vw ,14px);
+            letter-spacing: 0.03em;
+            color: #0065b2;
+
+            @include small-tablet{
+                color: var(--darkblue-color);
+            }
+        }
+
+        & h3 {
+            font-weight: 700;
+            font-size: clamp(18px, 3vw ,24px);
+            letter-spacing: 0.06em;
+            color: #000;
+            margin: 0;
+
+            @include small-tablet{
+                color: #fff;
+            }
+        }
+    }
+
+    & .accordion-icon {
+        transition: transform 0.3s ease;
+    }
+
+    & .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        // padding: 0 30px;
+    }
+
+    & .accordion-content p {
+        display: block;
+        font-weight: 400;
+        font-size: clamp(14px, 3vw ,24px);
+        letter-spacing: 0.06em;
+        color: #fff;
+        margin: 0;
+        padding-bottom: 30px;
+        padding-left: 32px;
+
+        @include small-tablet{
+            padding-left: 20px;
+        }
+    }
+
+    & .accordion-item.active .accordion-content {
+        max-height: 2500px;
+        /* Adjust based on content */
+    }
+    & .accordion-item.active{
+       @include small-tablet{
+        & .accordion-header{
+            background: var(--darkblue-color);
+            border-color: transparent;
+            
+            & span{
+                color: #009bf0;
+            }
+        }
+       }
+    }
+
+    & .accordion-item.active .accordion-icon {
+        transform: rotate(0);
+    }
+
+}

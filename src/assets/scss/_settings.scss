@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.h-reset {
+  margin: 0;
+  font-size: inherit;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.grid-row{
+  display: grid;
+}
+
+.project_link {
+  border-radius: 17px;
+  padding: 6px 20px;
+  border: 2px solid transparent;
+  transition: all 0.3s linear;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-align: center;
+
+  &.--accent {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+
+  &.--border {
+    border-color: var(--accent-color);
+    color: #000;
+  }
+
+  &.--gold {
+    background-color: var(--gold-color);
+  }
+
+  &.--white {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &.--purpure{
+    background-color: var(--purpure-color);
+    color: #fff;
+  }
+
+  &.--darkblue{
+    background-color: var(--darkblue-color);
+    color: #fff;
+  }
+}
+
+.project_soc {
+  padding: 3px;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    width: 25px;
+    height: 25px;
+  }
+
+  &.--accent {
+    background-color: var(--accent-color);
+  }
+}
+
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: clamp(25px , 6vw , 90px);
+}
+
+.main {
+  & .section.mar0 {
+    margin-top: 0;
+  }
+}
+
+.project_title-main {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: clamp(32px, 4.8vw ,70px);
+  line-height: 120%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+
+  &.--white {
+    color: #fff;
+  }
+
+  &.--accent {
+    color: var(--darkblue-color);
+    font-weight: 600;
+  }
+}
+
+.project_title {
+  font-weight: 700;
+  font-size: clamp(20px, 4vw ,32px);
+  letter-spacing: 0.17em;
+  text-align: center;
+  color: #000;
+  margin: 0;
+
+  &.--white {
+    color: #fff;
+  }
+  &.--second{
+    font-size: clamp(18px, 3.5vw, 34px);
+    font-family: var(--second-family);
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

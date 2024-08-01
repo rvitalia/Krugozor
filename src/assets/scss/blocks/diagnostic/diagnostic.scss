@@ -1,0 +1,54 @@
+.diagnostic{
+    & .directions_inner_menu li:after{
+        height: unset;
+        top: 3px;
+        background-image: url('data:image/svg+xml,%20%3Csvg%20width=%22100%25%22%20height=%2242%22%20viewBox=%220%200%20175%2042%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%20preserveAspectRatio=%22none%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d=%22M173.277%208.97501C173.383%209.77336%20173.092%2010.7288%20172.177%2011.8684C171.262%2013.0083%20169.796%2014.2354%20167.776%2015.5186C163.742%2018.0816%20157.701%2020.7432%20150.063%2023.3368C134.805%2028.5186%20113.372%2033.3632%2089.3905%2036.6279C65.4085%2039.8926%2043.4713%2040.9519%2027.3991%2040.0353C19.3546%2039.5765%2012.8317%2038.6253%208.2698%2037.2325C5.98578%2036.5351%204.2505%2035.7438%203.06909%2034.8893C1.88803%2034.0351%201.35657%2033.1917%201.25007%2032.3934C1.14356%2031.595%201.43505%2030.6396%202.35012%2029.5C3.26547%2028.36%204.73149%2027.133%206.75129%2025.8497C10.7854%2023.2867%2016.8264%2020.6252%2024.4637%2018.0316C39.7224%2012.8498%2061.1546%208.00513%2085.1365%204.74042C109.118%201.47572%20131.056%200.416427%20147.128%201.33307C155.172%201.79186%20161.695%202.74309%20166.257%204.13591C168.541%204.83326%20170.277%205.62453%20171.458%206.47904C172.639%207.33329%20173.17%208.17667%20173.277%208.97501Z%22%20stroke=%22#0065B2%22%20stroke-width=%221%22%20/%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/svg%3E');
+        left: -5px;
+        right: -5px;
+    }
+    &.directions .directions_inner_menu li:nth-child(4){
+        left: 0;
+    }
+    &.directions .directions_inner{
+        @media (max-width: 1200px) {
+            padding-left: 20px;
+        }
+        @include mobile{
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+    }
+
+    &.directions .directions_inner_menu li a{
+        font-size: clamp(18px, 3vw, 36px);
+    }
+
+    & .directions_inner_menu li{
+        display: flex;
+        justify-content: center;
+        & a{
+            // max-width: max-content;
+            text-align: center;
+        }
+    }
+
+    & .directions_inner_menu{
+        @include mobile{
+            gap: 8.5vw;
+        }
+    }
+
+    &.directions .directions_inner_menu li:nth-child(3){
+        @include mobile{
+            top: -12px !important;
+            margin-right: 20% !important;
+        }
+    }
+    &.directions .directions_inner_menu li:nth-child(1){
+        @include mobile{
+            margin-left: unset !important;
+            margin-right: auto !important;
+            left: 15px !important;
+        }
+    }
+}

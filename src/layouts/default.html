@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header }}
+
+        <main class="main">
+            {{> body }}
+        </main>
+        {{> footer }}
+
+    </div>
+    <!-- <script src="assets/js/app.js"></script> -->
+    <script>
+       document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("burger-menu"),t=document.getElementById("header-mobile");e.addEventListener("click",function(){e.classList.toggle("active"),t.classList.toggle("active")});var n=document.body;document.querySelector(".container"),n=window.innerWidth-n.clientWidth,document.documentElement.style.setProperty("--scrollbar-width",n+"px")}),document.addEventListener("DOMContentLoaded",function(){new Swiper(".swiper-intro",{slidesPerView:1,spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}}),new Swiper(".swiper-photo",{slidesPerView:4,centeredSlides:!0,spaceBetween:20,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},breakpoints:{320:{slidesPerView:1,spaceBetween:10,centeredSlides:!0},570:{slidesPerView:1.5,spaceBetween:30,centeredSlides:!1},640:{slidesPerView:2,spaceBetween:25},1024:{slidesPerView:3,spaceBetween:25},1200:{slidesPerView:4,spaceBetween:25}}})}),document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".accordion-header").forEach(e=>{e.addEventListener("click",function(){var e,t=this.parentElement,n=t.querySelector(".accordion-content"),i=n.scrollHeight;t.classList.contains("active")?(t.classList.remove("active"),n.style.maxHeight=null):((e=document.querySelector(".accordion-item.active"))&&(e.classList.remove("active"),e.querySelector(".accordion-content").style.maxHeight=null),t.classList.add("active"),n.style.maxHeight=i+"px")})})}),ymaps.ready(function(){new ymaps.Map("map",{center:[55.76,37.64],zoom:10})}),document.addEventListener("DOMContentLoaded",function(){const i=document.querySelectorAll(".tab-btn"),c=document.querySelectorAll(".tab-content");i.forEach(n=>{n.addEventListener("click",()=>{i.forEach(e=>e.classList.remove("active")),c.forEach(e=>{e.classList.remove("active"),e.style.display="none"}),n.classList.add("active");const e=n.getAttribute("data-tab"),t=document.getElementById(e);t.style.display="block",setTimeout(()=>t.classList.add("active"),10)})})});
+    </script>
+</body>
+
+</html>

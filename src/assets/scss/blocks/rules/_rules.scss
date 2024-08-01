@@ -1,0 +1,181 @@
+.rules {
+
+    & .project_title {
+        text-align: left;
+        margin-bottom: clamp(20px, 3.6vw, 50px);
+        padding-left: clamp(10px, 2.6vw, 50px);
+    }
+
+    & p {
+        font-weight: 400;
+        font-size: clamp(15px, 3vw, 24px);
+        letter-spacing: 0.03em;
+        margin-top: 0;
+        padding-left: clamp(10px, 2.6vw, 50px);
+        margin-bottom: clamp(20px, 3vw, 30px);
+    }
+
+    .rules_list {
+        column-count: 3;
+        column-gap: 120px;
+        list-style: none;
+        max-width: 966px;
+        padding-left: clamp(10px, 2.6vw, 50px);
+        margin: 0;
+
+        @media (max-width:1250px) {
+            column-count: 2;
+            max-width: 600px;
+        }
+
+        @include tablet{
+            max-width: 400px;
+        }
+
+        @include mobile{
+            max-width: 90%;
+            column-gap: 0;
+        }
+
+        & li {
+            position: relative;
+            font-weight: 700;
+            font-size: clamp(15px, 3vw, 24px);
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+
+            &:before {
+                content: url('data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Ccircle%20cx%3D%225.5%22%20cy%3D%225.5%22%20r%3D%224%22%20stroke%3D%22%230065B2%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
+                position: absolute;
+                left: -20px;
+                /* Сдвиг влево от текста */
+                top: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    & .accordion {
+        width: 100%;
+        padding-top: 42px;
+    }
+
+    & .accordion-item {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+    }
+
+    & .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 50px;
+        cursor: pointer;
+        background-color: var(--darkblue-color);
+        border-radius: 30px;
+        transition: all 0.3s ease;
+
+        @include small-tablet {
+            border-radius: unset;
+            background-color: transparent;
+            border-top: 2px solid var(--darkblue-color);
+            border-bottom: 2px solid var(--darkblue-color);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+
+        & svg {
+            transform: rotate(-90deg);
+            stroke: #fff;
+            flex-shrink: 0;
+
+            @include small-tablet {
+                stroke: var(--darkblue-color);
+                width: 22px;
+                height: 14px;
+            }
+        }
+    }
+
+    & .accordion-header_top {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @include small-tablet {
+            flex-direction: column-reverse;
+            gap: 4px;
+            align-items: flex-start;
+        }
+
+
+
+        & h3 {
+            font-weight: 700;
+            font-size: clamp(18px, 3vw, 24px);
+            letter-spacing: 0.06em;
+            color: #fff;
+            margin: 0;
+
+            @include small-tablet {
+                color: var(--darkblue-color);
+                margin-left: 30px;
+                margin-right: 40px;
+            }
+        }
+    }
+
+    & .accordion-icon {
+        transition: transform 0.3s ease;
+    }
+
+    & .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    & .accordion-content p {
+        display: block;
+        font-weight: 400;
+        font-size: clamp(14px, 3vw, 24px);
+        letter-spacing: 0.06em;
+        margin: 0;
+        padding-bottom: clamp(20px, 3vw, 40px);
+    }
+
+    & .accordion-item.active .accordion-content {
+        max-height: 100000px;
+        /* Adjust based on content */
+    }
+
+    & .accordion-item.active {
+        @include small-tablet {
+            & .accordion-header {
+                background: var(--darkblue-color);
+                border-color: transparent;
+
+                & h3 {
+                    color: #fff;
+                }
+
+                & svg{
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+
+    & .accordion-item.active .accordion-icon {
+        transform: rotate(0);
+    }
+}
+
+.page:has(.rules){
+    .footer{
+        margin-top: 30px;
+    }
+}

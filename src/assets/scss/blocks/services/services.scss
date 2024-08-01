@@ -1,0 +1,63 @@
+.services {
+    & .services_inner {
+        margin-left: -40px;
+        margin-right: -40px;
+        background-color: var(--accent-color);
+        border-radius: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+        @include for-desktop{
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        @include small-tablet{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        & .project_title {
+            font-family: var(--second-family);
+            font-weight: 700;
+            // font-size: 34px;
+            letter-spacing: 0.17em;
+            color: #fff;
+            text-align: left;
+        }
+
+        & .services_desc {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: clamp(16px, 3vw, 24px);
+            letter-spacing: 0.03em;
+            color: #fff;
+            max-width: 915px;
+            margin-top: 20px;
+            margin-bottom: clamp(20px, 5vw ,60px);
+        }
+
+        & .grid-row {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: clamp(10px, 4vw ,25px);
+
+            & li {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-weight: 700;
+                font-size: clamp(16px, 3vw, 24px);
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                color: #fff;
+
+                & img{
+                    width: clamp(24px, 3.5vw, 40px);
+                    height: clamp(24px, 3.5vw, 40px);
+                }
+            }
+        }
+    }
+}

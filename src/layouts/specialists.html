@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header }}
+
+        <main class="main">
+            {{> body }}
+        </main>
+        {{> footer }}
+
+    </div>
+    <!-- <script src="assets/js/app.js"></script> -->
+    <script>
+       document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("burger-menu"),t=document.getElementById("header-mobile");e.addEventListener("click",function(){e.classList.toggle("active"),t.classList.toggle("active")});var c=document.body;document.querySelector(".container"),c=window.innerWidth-c.clientWidth,document.documentElement.style.setProperty("--scrollbar-width",c+"px")}),document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".accordion-header").forEach(e=>{e.addEventListener("click",function(){var e,t=this.parentElement,c=t.querySelector(".accordion-content"),n=c.scrollHeight;t.classList.contains("active")?(t.classList.remove("active"),c.style.maxHeight=null):((e=document.querySelector(".accordion-item.active"))&&(e.classList.remove("active"),e.querySelector(".accordion-content").style.maxHeight=null),t.classList.add("active"),c.style.maxHeight=n+"px")})}),document.querySelector(".accordion-header").click()});
+    </script>
+</body>
+
+</html>

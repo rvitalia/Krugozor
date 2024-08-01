@@ -1,0 +1,60 @@
+.nonresidence {
+    & p {
+        font-size: clamp(14px, 2.5vw, 24px);
+    }
+
+    & dl {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        padding-left: clamp(10px, 2.6vw, 50px);
+        gap: 10px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+
+        & dt {
+            font-weight: 400;
+            font-size: clamp(14px, 2.5vw, 24px);
+            letter-spacing: 0.03em;
+            color: #000;
+        }
+
+        & dd {
+            font-weight: 800;
+            font-size: clamp(14px, 2.5vw, 24px);
+            letter-spacing: 0.03em;
+            text-align: right;
+            color: #0065b2;
+            white-space: nowrap;
+        }
+
+    }
+
+    & a {
+        font-weight: 800;
+        font-size: clamp(14px, 3vw, 24px);
+        line-height: 158%;
+        letter-spacing: 0.12em;
+        text-align: center;
+        color: var(--darkblue-color);
+
+        @include small-tablet {
+            border-radius: 35px;
+            max-width: 387px;
+            min-height: 70px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: var(--darkblue-color);
+            color: #fff;
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.rejection {
+
+    & .project_title {
+        font-family: var(--second-family);
+        text-align: left;
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-size: clamp(16px, 3.2vw, 34px);
+    }
+
+    & .rejection_text {
+        font-weight: 400;
+        font-size: clamp(15px, 3.3vw, 24px);
+        letter-spacing: 0.03em;
+        color: #000;
+        margin-bottom: 25px;
+    }
+
+    & .rejection_list {
+        @media (max-width:1150px) {
+            padding-left: 35px;
+        }
+
+        @include mobile{
+            padding-left: 22px;
+        }
+
+        li {
+            position: relative;
+            font-weight: 600;
+            font-size: clamp(15px, 3.3vw, 24px);
+            letter-spacing: 0.03em;
+            color: var(--darkblue-color);
+
+
+            &>img:first-child {
+                position: absolute;
+                top: 0;
+                left: -35px;
+                z-index: 1;
+
+                @include mobile{
+                    width: 17px;
+                    height: 17px;
+                    left: -22px;
+                }
+            }
+
+            & + li{
+                margin-top: clamp(15px, 4vw ,35px);
+            }
+        }
+    }
+}

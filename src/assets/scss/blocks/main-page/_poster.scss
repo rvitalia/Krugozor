@@ -1,0 +1,67 @@
+.poster {
+    & .grid-row {
+        padding: 36px 0;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 38px;
+
+        @include small-tablet{
+            gap: 11px;
+        }
+    }
+}
+
+.poster_item {
+    padding: 14px 23px 30px;
+    border-radius: 30px;
+
+    &.--green {
+        background-color: var(--green-color);
+    }
+
+    &.--accent {
+        background-color: var(--accent-color);
+    }
+
+    &.--orange {
+        background-color: var(--orange-color);
+    }
+
+
+    & time {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        font-weight: 800;
+        font-size: clamp(16px,3vw ,24px);
+        letter-spacing: 0.17em;
+        color: #0065b2;
+
+        @include mobile{
+            flex-direction: column;
+            gap: 0;
+            align-items: flex-start;
+        }
+
+        & span {
+            font-weight: 800;
+            font-size: inherit;
+            letter-spacing: 0.17em;
+            color: #fff;
+        }
+    }
+
+    & p {
+        margin: 0;
+        padding-top: 38px;
+        font-family: var(--third-family);
+        font-weight: 600;
+        font-size: clamp(14px, 2.7vw, 18px);
+        letter-spacing: 0.17em;
+        color: #fff;
+
+        @include small-tablet{
+            padding-top: 13px;
+        }
+    }
+}

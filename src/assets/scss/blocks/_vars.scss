@@ -1,0 +1,29 @@
+:root {
+  // base
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Neometric", sans-serif;
+  --third-family: "NeverMind Compact", sans-serif;
+  --font3: "Muller", sans-serif;
+  --font4: "VAG World", sans-serif;
+  --content-width: 1310px;
+  --content-fluid-width: 1690px;
+  --container-offset: 70px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+
+  // colors
+  --accent-color: #009bf0;
+  --gold-color: #FFC93A;
+  --purpure-color: #9155E8;
+  --green-color: #9cc624;
+  --orange-color: #ff7223;
+  --rose-color: #ff4174;
+  --darkblue-color: #0065b2;
+  --text-colot: rgba(#141024, 0.7);
+}
+
+@media (max-width: 1150px){
+  :root{
+    --container-offset: 30px;
+  }
+}

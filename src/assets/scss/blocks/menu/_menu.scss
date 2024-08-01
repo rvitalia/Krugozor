@@ -1,0 +1,160 @@
+.about {
+
+    & .grid-row {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 15px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        & li {
+
+            border-radius: 30px;
+            min-height: 159px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            @include mobile {
+                min-height: 120px;
+            }
+
+            & a {
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: clamp(18px, 2.7vw, 24px);
+                letter-spacing: 0.17em;
+                text-align: center;
+                color: inherit;
+                text-align: center;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            &.--white {
+                background: #fff;
+                border: 1px solid #000;
+            }
+
+            &.--darkblue {
+                background: var(--darkblue-color);
+                color: #fff;
+            }
+
+            &.--rose {
+                background: var(--rose-color);
+                color: #fff;
+            }
+
+            &.--gold {
+                background: var(--gold-color);
+            }
+
+            &.--purpure {
+                background: var(--purpure-color);
+                color: #fff;
+            }
+
+            &.--accent {
+                background: var(--accent-color);
+                color: #fff;
+            }
+
+            &:nth-child(1) {
+                grid-column: 8 span;
+                grid-row: 2 span;
+                border-radius: 30px 30px 200px 30px;
+
+                @include tablet {
+                    grid-column: 12 span;
+                }
+
+                @include mobile {
+                    grid-column: unset;
+                    border-radius: 30px;
+                }
+
+                & .img-wrap {
+                    margin-top: -50px;
+                    margin-bottom: -35px;
+
+                    @include mobile {
+                        margin: 0;
+                        margin-right: -30px;
+                    }
+
+                    & img {
+                        @include mobile {
+                            max-width: 163px;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                grid-column: 4 span;
+
+                @include tablet {
+                    grid-column: 6 span;
+                }
+
+                @include mobile {
+                    grid-column: unset;
+                }
+
+            }
+
+            &:nth-child(3) {
+                grid-column: 4 span;
+
+                @include tablet {
+                    grid-column: 6 span;
+                }
+
+                @include mobile {
+                    grid-column: unset;
+                }
+            }
+
+            &:nth-child(4) {
+                grid-column: 4 span;
+
+                @include mobile {
+                    grid-column: unset;
+                }
+            }
+
+            &:nth-child(5) {
+                grid-column: 8 span;
+
+                @include mobile {
+                    grid-column: unset;
+                }
+            }
+
+            &:nth-child(6) {
+                grid-column: 8 span;
+
+                @include mobile {
+                    grid-column: unset;
+                }
+            }
+
+            &:nth-child(7) {
+                grid-column: 4 span;
+
+                @include mobile {
+                    grid-column: unset;
+                }
+            }
+        }
+
+    }
+}

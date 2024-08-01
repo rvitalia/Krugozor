@@ -1,0 +1,15 @@
+.container{
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 70px;
+
+    @include for-desktop{
+        padding: 0 30px;
+    }
+
+    @include mobile{
+        padding: 0px 20px;
+    }
+}
+

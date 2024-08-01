@@ -1,0 +1,131 @@
+.info {
+
+    @include mobile {
+        padding-top: 60px;
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        @include small-tablet {
+            gap: 60px;
+        }
+    }
+
+    & .info_title {
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: clamp(16px, 2vw, 26px);
+        letter-spacing: 0.17em;
+        color: #000;
+        margin: 0;
+        margin-bottom: 20px;
+        display: block;
+        text-transform: uppercase;
+
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+
+    & .flex-row {
+        gap: 20px;
+
+        @include small-tablet {
+            flex-wrap: wrap;
+        }
+
+        & span {
+            font-family: var(--third-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 0.11em;
+            color: #000;
+
+            @include small-tablet {
+                display: block;
+                text-align: center;
+                width: 100%;
+                margin-top: -10px;
+                font-size: 16px;
+            }
+        }
+
+        &+.flex-row {
+            margin-top: 20px;
+        }
+    }
+
+    & .project_link {
+        font-size: 20px;
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        @include small-tablet {
+            height: 70px;
+            font-weight: 800;
+            font-size: 18px;
+            width: 100%;
+            border-radius: 35px;
+            padding: unset;
+        }
+
+        & span {
+            line-height: 1;
+        }
+    }
+
+    &.info_services {
+        & li>.info_title+.info_description {
+            margin-top: 20px;
+            margin-bottom: clamp(20px, 3vw ,30px);
+        }
+
+        & li{
+            & .project_link {
+                max-width: 333px;
+
+                @include mobile{
+                    max-width: unset;
+                }
+            }
+        }
+        
+
+        & .info_description {
+            font-weight: 400;
+            font-size: clamp(16px, 3vw, 20px);
+            line-height: 120%;
+            letter-spacing: 0.11em;
+            color: #000;
+
+            @include mobile {
+                font-family: var(--third-family);
+                text-align: center;
+            }
+        }
+
+        & .flex-row {
+            max-width: 914px;
+            justify-content: space-between;
+            
+            & .flex-column {
+                gap: 14px;
+                flex: 1 0 calc(50% - 14px);
+
+                @include mobile{
+                    flex: 1 0 100%;
+                }
+
+            }
+        }
+    }
+
+}

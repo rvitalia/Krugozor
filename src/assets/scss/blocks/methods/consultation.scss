@@ -1,0 +1,154 @@
+.consultation {
+    & .grid-row {
+        grid-template-columns: 490px 1fr;
+        align-items: center;
+        padding-top: 72px;
+        gap: 5%;
+
+        @media (max-width:1250px){
+            gap: 2%;
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+
+        @include small-tablet{
+            padding: 38px 17px;
+            overflow: hidden;
+        }
+        @include mobile{
+            gap: 10px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        & .question_item>img {
+            max-width: 490px;
+            max-height: 417px;
+            object-fit: contain;
+            position: static !important;
+            margin-left: -80px;
+
+            @media (max-width:1250px){
+                // margin-left: 0;
+                max-width: 435px !important;
+            }
+            @include small-tablet{
+                max-width: 342px !important;
+                max-height: 332px !important;
+                min-width: unset !important;
+                margin: unset !important;
+                margin-left: -18% !important;
+            }
+
+            @include mobile{
+                margin-left: -10% !important;
+            }
+        }
+
+        & .question_item {
+
+            position: relative;
+
+            & .project_link{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+                @include tablet{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &:nth-child(1) {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                overflow: hidden;
+
+                @include tablet{
+                    display: none;
+                }
+
+                @include mobile{
+                    display: flex;
+                    overflow: visible;
+                    min-height: unset;
+                }
+           
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url('data:image/svg+xml,%3Csvg%20width=%22434%22%20height=%2279%22%20viewBox=%220%200%20434%2079%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cg%20filter=%22url(#filter0_f_4329_7795)%22%3E%20%20%20%20%20%3Cellipse%20cx=%22217%22%20cy=%2239.5%22%20rx=%22198%22%20ry=%2220.5%22%20fill=%22#0180C6%22%20/%3E%20%20%20%3C/g%3E%20%20%20%3Cdefs%3E%20%20%20%20%20%3Cfilter%20id=%22filter0_f_4329_7795%22%20x=%220.200001%22%20y=%220.200001%22%20width=%22433.6%22%20height=%2278.6%22%20filterUnits=%22userSpaceOnUse%22%20color-interpolation-filters=%22sRGB%22%3E%20%20%20%20%20%20%20%3CfeFlood%20flood-opacity=%220%22%20result=%22BackgroundImageFix%22%20/%3E%20%20%20%20%20%20%20%3CfeBlend%20mode=%22normal%22%20in=%22SourceGraphic%22%20in2=%22BackgroundImageFix%22%20result=%22shape%22%20/%3E%20%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation=%229.4%22%20result=%22effect1_foregroundBlur_4329_7795%22%20/%3E%20%20%20%20%20%3C/filter%3E%20%20%20%3C/defs%3E%20%3C/svg%3E');
+                    width: 396px;
+                    height: 41px;
+
+                    @include tablet{
+                        display: none;
+                    }
+                }
+            }
+
+        }
+
+        & .consultation_title {
+            font-family: var(--second-family);
+            font-weight: 600;
+            font-size: clamp(22px, 3vw, 32px);
+            letter-spacing: 0.14em;
+            color: #fff;
+
+            @media (max-width:1250px) {
+                & br{
+                    display: none;
+
+                    &:first-child{
+                        @include mobile{
+                            display: block;
+                        }
+                    }
+                    &:nth-child(2){
+                        @include mobile{
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            @include tablet{
+                text-align: center;
+            }
+
+            @include small-tablet{
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        & .project_link.--white {
+            margin-top: 55px;
+        }
+
+        & .project_link.--border {
+            border: 3px solid #fff;
+            border-radius: 20px;
+            color: #fff;
+            margin-top: 20px;
+        }
+    }
+}

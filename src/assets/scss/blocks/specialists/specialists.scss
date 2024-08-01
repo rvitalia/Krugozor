@@ -1,0 +1,172 @@
+.specialists {
+    & .accordion-content {
+        margin-top: 55px;
+
+        & .grid-row {
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 11px;
+            padding-bottom: 80px;
+            
+            @include mobile{
+                grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+                gap: 24px;
+                row-gap: 35px;
+            }
+        }
+    }
+
+    & .accordion-header_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #000;
+
+        & h3 {
+            margin: 0;
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: clamp(16px, 3vw, 26px);
+            letter-spacing: 0.17em;
+            color: #000;
+        }
+
+        & svg {
+            cursor: pointer;
+        }
+    }
+
+    & .specialist_item {
+        background: #0065b2;
+        border-radius: 80px 30px 30px 30px;
+        
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+        
+        @include mobile {
+            position: relative;
+            margin-bottom: 51px;
+        }
+        
+        & .img-wrap {
+            border-radius: 80px 30px 0 0;
+            margin-bottom: 7px;
+            overflow: hidden;
+            width: 100%;
+
+            & img {
+                width: 100%;
+
+                // @include mobile{
+                //     max-height: ;
+                // }
+            }
+        }
+    }
+
+    & .specialist_item_title {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: clamp(14px, 3vw, 16px);
+        letter-spacing: 0.17em;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    & .specialist_item_title,
+    & .specialist_item_prof,
+    & .specialist_item_exp {
+        padding-right: 20px;
+        padding-left: 20px;
+
+        @include small-mobile{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+
+    & .specialist_item_prof {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: clamp(12px, 3vw, 16px);
+        letter-spacing: 0.17em;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+
+    & .specialist_item_exp {
+        font-weight: 700;
+        font-size: clamp(12px, 3vw, 16px);
+        letter-spacing: 0.08em;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 17px;
+        flex-grow: 1;
+    }
+
+    & .project_link {
+        text-transform: capitalize;
+        max-width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mobile {
+            padding: 17px 0;
+            position: absolute;
+            top: calc(100% + 8px);
+            max-width: unset;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: 35px;
+            background: var(--darkblue-color);
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 46%;
+            letter-spacing: 0.11em;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+    & .accordion {
+        width: 100%;
+        // padding-top: 42px;
+    }
+
+    & .accordion-header {
+
+        & svg {
+            transform: rotate(-90deg);
+            // stroke: #fff;
+            flex-shrink: 0;
+            transition:  transform 0.3s linear;
+        }
+    }
+
+    & .accordion-icon {
+        transition: transform 0.3s ease;
+    }
+
+    & .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+
+    & .accordion-item.active .accordion-content {
+        max-height: 100vh;
+        /* Adjust based on content */
+    }
+
+
+    & .accordion-item.active .accordion-header_top svg {
+        transform: rotate(0);
+    }
+
+}

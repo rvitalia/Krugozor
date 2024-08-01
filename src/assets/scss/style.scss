@@ -1,0 +1,117 @@
+// @import 'vendor/reset';
+@import 'blocks/vars';
+@import 'mixins';
+// @import "./vendor/animate";
+
+
+@import 'fonts';
+@import 'settings';
+
+
+html,
+body {
+  height: 100%;
+  background: #fff;
+  margin: 0;
+  font-family: var(--font-family);
+  color: #000;
+}
+
+.main {
+  height: 100%;
+  flex: 1 0 auto;
+}
+body:has(.burger-menu.active){
+  overflow: hidden;
+  padding-right: var(--scrollbar-width);
+}
+
+// ======blocks=========
+
+@import 'blocks/container';
+@import 'blocks/page';
+@import 'blocks/header';
+
+@import 'blocks/main-page/hero';
+@import 'blocks/main-page/popular';
+@import 'blocks/main-page/insitizen';
+@import 'blocks/main-page/why';
+@import 'blocks/main-page/photo';
+@import 'blocks/main-page/news';
+@import 'blocks/main-page/poster';
+@import 'blocks/main-page/review';
+@import 'blocks/main-page/question';
+
+@import 'blocks/menu/menu';
+
+@import 'blocks/about/center';
+@import 'blocks/about/blockquote';
+@import 'blocks/main-page/why';
+@import 'blocks/main-page/photo';
+
+@import 'blocks/invite/invite';
+@import 'blocks/invite/advantages';
+
+@import 'blocks/rules/rules';
+
+@import 'blocks/license/license';
+
+@import 'blocks/requisites/requisites';
+
+@import 'blocks/directions/directions';
+@import 'blocks/main-page/hero';
+@import 'blocks/main-page/question';
+
+@import 'blocks/main-page/question';
+@import 'blocks/specialists/specialists';
+
+@import 'blocks/methods/methods';
+@import 'blocks/methods/video';
+@import 'blocks/methods/consultation';
+@import 'blocks/main-page/question';
+
+
+@import 'blocks/directions/directions';
+@import 'blocks/diagnostic/diagnostic';
+
+@import 'blocks/ultrasound/ultrasound';
+@import 'blocks/methods/consultation';
+@import 'blocks/main-page/question';
+
+
+@import 'blocks/consilium/consilium';
+
+@import 'blocks/main-page/hero';
+@import 'blocks/price/price';
+@import 'blocks/price/cost';
+@import 'blocks/methods/consultation';
+@import 'blocks/main-page/question';
+
+
+@import 'blocks/terapevt/terapevt';
+@import 'blocks/specialists/specialists';
+@import 'blocks/methods/methods';
+
+
+@import 'blocks/contacts/map';
+@import 'blocks/contacts/info';
+
+@import 'blocks/consilium/consilium';
+@import 'blocks/parents/parents';
+
+@import 'blocks/services/services';
+@import 'blocks/contacts/info';
+
+@import 'blocks/rejection/rejection';
+
+@import 'blocks/rules/rules';
+@import 'blocks/payments/payments';
+
+@import 'blocks/payments-online/payments-online';
+
+@import 'blocks/nonresidence/nonresidence';
+@import 'blocks/rules/rules';
+
+@import 'blocks/nalog/nalog';
+
+@import 'blocks/footer';

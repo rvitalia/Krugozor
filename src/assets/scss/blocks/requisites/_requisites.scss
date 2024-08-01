@@ -1,0 +1,40 @@
+.requisites {
+    & .project_title {
+        text-align: left;
+        margin-bottom: clamp(50px, 4vw, 63px);
+    }
+
+    & .grid-row {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: clamp(40px, 9.5vw, 140px);
+        row-gap: clamp(30px, 5vw, 70px);
+
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    & .requisites_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.--row dl{
+            display: flex;
+            gap: 10px;
+        }
+
+        & dt , & dd {
+            font-weight: 800;
+            font-size: clamp(15px, 2.1vw, 24px);
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--accent-color);
+        }
+
+        & dd{
+            color: black;
+            font-weight: 400;
+        }
+    }
+}

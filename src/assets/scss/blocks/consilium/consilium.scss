@@ -1,0 +1,109 @@
+.consilium {
+    & .grid-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(14px, 2vw, 25px);
+
+        & li {
+            min-height: clamp(120px, 11vw, 159px);
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include small-tablet {
+                grid-column: 3 span;
+            }
+
+            & a {
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: clamp(18px, 2.5vw, 24px);
+                letter-spacing: 0.17em;
+                text-align: center;
+
+                & img {
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+
+            &.--main {
+                grid-column: 3 span;
+                border-radius: 30px 30px 200px 30px;
+                overflow: hidden;
+
+                @include small-tablet {
+                    border-radius: 30px;
+                }
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    gap: clamp(10px, 6.2vw, 100px);
+                    justify-content: space-around;
+                    font-size: clamp(18px, 5.2vw, 70px);
+
+                    @include small-tablet {
+                        justify-content: center;
+                    }
+                    @media (max-width:500px){
+                        gap: 0;
+                    }
+                }
+
+                & img {
+                    max-width: clamp(184px, 29vw, 395px);
+
+                    @include small-tablet {
+                        margin-right: -50px;
+                    }
+                }
+            }
+
+            &.--green {
+                background-color: var(--green-color);
+
+                & a {
+                    color: #fff;
+                }
+            }
+
+            &.--border {
+                background-color: var(--white-color);
+                border: 1px solid black;
+            }
+
+            &.--orange {
+                background-color: var(--orange-color);
+
+                & a {
+                    color: #fff;
+                }
+            }
+
+            &.--darkblue {
+                background-color: var(--darkblue-color);
+
+                & a {
+                    color: #fff;
+                }
+            }
+
+            &.--purpure {
+                background-color: var(--purpure-color);
+
+                & a {
+                    color: #fff;
+                }
+            }
+
+            &.--accent {
+                background-color: var(--accent-color);
+
+                & a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

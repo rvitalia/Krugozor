@@ -1,0 +1,273 @@
+.nalog {
+
+    @include small-tablet {
+        margin-bottom: 120px;
+    }
+
+    & .project_title {
+        text-align: left;
+        padding-left: clamp(10px, 2.6vw, 50px);
+        padding-right: clamp(10px, 2.6vw, 50px);
+    }
+
+    & p {
+        font-weight: 400;
+        font-size: clamp(15px, 2.5vw, 24px);
+        letter-spacing: 0.03em;
+        color: #000;
+        padding-left: clamp(10px, 2.6vw, 50px);
+        padding-right: clamp(10px, 2.6vw, 50px);
+
+        @include mobile{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+
+}
+
+.nalog_request {
+    padding: 40px 50px;
+    background-color: var(--accent-color);
+    border-radius: 30px;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+
+    @include small-tablet {
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.nalog_request_label {
+    display: none;
+
+    @include small-tablet {
+        display: block;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.11em;
+        color: #fff;
+        margin-bottom: 5px;
+        padding-left: 15px;
+    }
+}
+
+.naolg_request_title {
+    color: var(--darkblue-color);
+    font-weight: 600;
+    font-size: clamp(14px, 2.5vw, 20px);
+    line-height: 120%;
+    letter-spacing: 0.11em;
+    color: #0065b2;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: 0;
+    margin-bottom: 15px;
+
+    @include small-tablet {
+        margin-bottom: 25px;
+
+        & span {
+            display: none;
+        }
+    }
+}
+
+.nalog_request_form {
+    & label {
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+        font-size: 0;
+        line-height: 120%;
+        letter-spacing: 0.11em;
+        color: #fff;
+
+        @include small-tablet {
+            font-size: 14px;
+            padding-left: 15px;
+        }
+    }
+
+    & textarea {
+        border-radius: 20px;
+        height: 100vh;
+        max-height: 150px;
+        background: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0.11em;
+        color: #d4d4d4;
+        padding: 10px 20px;
+        resize: none;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        @include small-tablet {
+            margin-left: -15px;
+            margin-top: 8px;
+        }
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 0.11em;
+            color: #d4d4d4;
+
+            @include small-tablet {
+                color: transparent;
+            }
+        }
+    }
+
+    & .grid-row {
+        padding-left: 15px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        column-gap: clamp(20px, 3.5vw, 50px);
+
+        @include mobile{
+            padding-left: 0;
+        }
+
+        &+.flex-row {
+            margin-bottom: 20px;
+
+            & .content-wrapper {
+                margin-left: auto;
+            }
+
+            & p {
+                margin: 0;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 120%;
+                letter-spacing: 0.11em;
+                color: #fff;
+                display: block;
+                padding-top: 8px;
+
+                @include mobile {
+                    font-weight: 700;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+
+
+    & .flex-row:last-child {
+        gap: 20px;
+
+        @include small-tablet {
+            flex-direction: column;
+        }
+
+        & label {
+            display: block;
+            width: 100%;
+
+            @include small-tablet {
+                padding-left: 15px;
+            }
+        }
+
+        & .request_input {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 0.11em;
+            color: #d4d4d4;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: block;
+            width: 100%;
+            border: none;
+
+            @include small-tablet {
+                margin-left: -15px;
+                margin-top: 8px;
+            }
+
+            &::placeholder {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                letter-spacing: 0.11em;
+                color: #d4d4d4;
+
+                @include small-tablet {
+                    color: transparent;
+                }
+            }
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & .request_submit {
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 0.12em;
+            text-align: center;
+            color: #000;
+            background-color: #fff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 330px;
+            border: none;
+            height: 41px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include small-tablet {
+                position: absolute;
+                top: calc(100% + 19px);
+                max-width: 100%;
+                background: var(--accent-color);
+                border-radius: 35px;
+                min-height: 70px;
+                color: white;
+            }
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.nalog_request_item {
+    & span {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 120%;
+        letter-spacing: 0.11em;
+        color: #fff;
+        display: block;
+        padding-top: 8px;
+
+        @include mobile {
+            font-weight: 700;
+            padding-right: 8px;
+        }
+    }
+}

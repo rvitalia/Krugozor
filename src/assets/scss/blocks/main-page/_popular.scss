@@ -1,0 +1,118 @@
+.popular {
+    & .project_title {
+        text-align: center;
+        margin-bottom: clamp(20px, 4vw, 36px);
+    }
+
+    & .title_wrapper{
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.popular_inner {
+    display: grid;
+    // flex-wrap: wrap;
+    gap: 11px;
+    grid-template-columns: repeat(auto-fit, minmax(241px, 1fr));
+
+    @include mobile{
+        grid-template-columns: 1fr;
+    }
+
+    & li {
+        border-radius: 80px 30px 30px 30px;
+        padding: 24px 34px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        
+        @include mobile{
+            display: grid;
+            grid-template-columns: 76px 1fr;
+            gap: 22px;
+            row-gap: 6px;
+        }
+
+        &.--accent {
+            background-color: var(--accent-color);
+        }
+
+        &.--green {
+            background-color: var(--green-color);
+        }
+
+        &.--orange {
+            background-color: var(--orange-color);
+        }
+
+        &.--rose {
+            background-color: var(--rose-color);
+        }
+
+        &.--purpure {
+            background-color: var(--purpure-color);
+        }
+
+        & p {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.08em;
+            text-align: center;
+            color: #fff;
+            flex-grow: 1;
+            margin: 0 -26px;
+
+            @include mobile{
+                text-align: left;
+                margin: 0;
+            }
+
+        }
+
+        & .img-wrap{
+            max-height: 94px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mobile{
+                order: -1;
+                grid-row: 2 span;
+            }
+
+            & img{
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        & .project_link{
+            margin-top: auto;
+            flex-shrink: 0;
+            margin-top: -8px;
+
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+}
+
+.popular_title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.17em;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+
+    @include mobile{
+        text-align: left;
+    }
+}
