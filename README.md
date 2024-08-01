@@ -1,7 +1,7 @@
 ![image](https://github.com/user-attachments/assets/e3500108-fdd5-4089-99bf-f465187b3d89)
 
-главная   - https://rvitalia.github.io/Krugozor/dist/
-О нас - о кругозоре https://rvitalia.github.io/Krugozor/dist/about.html
+главная   - https://rvitalia.github.io/Krugozor/dist/    <br>
+О нас - о кругозоре https://rvitalia.github.io/Krugozor/dist/about.html   <br>
 Консультации - https://rvitalia.github.io/Krugozor/dist/consilium.html
 Контакты - https://rvitalia.github.io/Krugozor/dist/contacts.html
 Диагностика - https://rvitalia.github.io/Krugozor/dist/diagnostic.html
