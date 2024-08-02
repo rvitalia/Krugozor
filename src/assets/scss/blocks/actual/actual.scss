@@ -1,6 +1,19 @@
 .actual {
     position: relative;
 
+    & picture img{
+        @media (max-width: 1453px) {
+            max-width: clamp(99% , 0.1vw , 100% );
+        }
+        @media (max-width: (650px)){
+            max-width: 97%;
+        }
+        @media (max-width: (480px)){
+            max-width: 96%;
+        }
+    }
+
+
     & .actual_menu {
         list-style: none;
         margin: 0;
@@ -307,6 +320,11 @@
                 left: min(9.5vw, 138px);
                 top: min(142vw, 2092px);
 
+                
+                @media (max-width: (1460px)){
+                    top: min(144vw, 2092px);
+                }
+
                 @media (max-width: (650px)) {
                     left: 14vw;
                     top: 304.5vw;
@@ -322,6 +340,11 @@
                 left: min(64.5vw, 926px);
                 top: min(144vw, 2124px);
 
+                
+                @media (max-width: (1460px)){
+                    top: min(146vw, 2124px);
+                }
+
                 @media (max-width: (650px)) {
                     left: 51vw;
                     top: 316.5vw;
@@ -336,6 +359,11 @@
             &:nth-child(22) {
                 left: min(23.5vw, 359px);
                 top: min(155vw, 2282px);
+
+                
+                @media (max-width: (1460px)){
+                    top: min(157vw, 2282px);
+                }
 
                 @media (max-width: (650px)) {
                     left: 17vw;
