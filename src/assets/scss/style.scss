@@ -50,7 +50,7 @@ body:has(.burger-menu.active){
 @import 'blocks/main-page/photo';
 
 @import 'blocks/invite/invite';
-@import 'blocks/invite/advantages';
+// @import 'blocks/invite/advantages';
 
 @import 'blocks/rules/rules';
 
@@ -113,5 +113,9 @@ body:has(.burger-menu.active){
 @import 'blocks/rules/rules';
 
 @import 'blocks/nalog/nalog';
+
+@import 'blocks/invite/advantages';
+@import 'blocks/actual/actual';
+
 
 @import 'blocks/footer';

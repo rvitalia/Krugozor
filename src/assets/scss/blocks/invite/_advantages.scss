@@ -18,10 +18,10 @@
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: clamp(20px, 3vw ,40px);
+        gap: clamp(20px, 3vw, 40px);
         row-gap: 20px;
-        
-        @include for-desktop{
+
+        @include for-desktop {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         }
 
@@ -29,32 +29,93 @@
             display: flex;
             align-items: flex-start;
             font-weight: 500;
-            font-size: clamp(18px, 2.2vw ,26px);
+            font-size: clamp(18px, 2.2vw, 26px);
             letter-spacing: 0.06em;
             color: #fff;
-            gap: clamp(9px, 2vw ,20px);
+            gap: clamp(9px, 2vw, 20px);
             position: relative;
             z-index: 1;
 
-            &:nth-child(9){
+            &:nth-child(9) {
                 grid-row: 2 span;
             }
 
-            &:nth-child(10),&:nth-child(11){
+            &:nth-child(10),
+            &:nth-child(11) {
                 font-weight: 700;
-            } 
+            }
 
-            & img{
+            & img {
                 width: clamp(20px, 4vw, 40px);
                 height: clamp(20px, 4vw, 40px);
             }
         }
     }
-    & .advantages_inner_object{
+
+    & .advantages_inner_object {
         position: absolute;
         right: 0;
         top: 0;
         z-index: 0;
-        max-width: clamp(227px, 32vw ,496px);
+        max-width: clamp(227px, 32vw, 496px);
+    }
+
+    &.actual {
+
+        @include small-tablet {
+            padding-bottom: 120px;
+        }
+
+        & .advantages_inner {
+            @include small-tablet {
+                position: relative;
+            }
+        }
+
+        & .project_title {
+            text-align: left;
+            text-transform: uppercase;
+            max-width: 858px;
+            margin-bottom: clamp(25px, 3vw, 40px);
+        }
+
+        & .advantages_text {
+            font-weight: 500;
+            font-size: clamp(16px, 3vw, 26px);
+            letter-spacing: 0.12em;
+            color: #fff;
+            max-width: 865px;
+            margin-bottom: 30px;
+
+            @include small-tablet{
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        & .project_link {
+            width: 100%;
+            max-width: 591px;
+            display: block;
+
+            @include small-tablet {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: calc(100% + 14px);
+                border-radius: 35px;
+                height: 70px;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: none;
+            }
+        }
+
+        & .advantages_inner_object {
+            max-width: clamp(200px, 28vw, 286px);
+            // max-width: 286px;
+        }
     }
 }

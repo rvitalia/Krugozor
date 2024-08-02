@@ -39,7 +39,7 @@
     @content;
   }
 }
-@mixin burger-header {
+@mixin big-mobile {
   @media (max-width: (650px)) {
     @content;
   }
