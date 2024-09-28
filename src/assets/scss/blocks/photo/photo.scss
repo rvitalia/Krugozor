@@ -1,0 +1,80 @@
+.photo {
+    padding: 0 22px;
+
+    @media (max-width: 1250px) {
+        padding: 0;
+    }
+
+    & .project_title-main {
+        font-weight: 700;
+        text-align: center;
+    }
+
+    & .project_link{
+        max-width: 348px;
+
+        @include mobile{
+            padding: 21px 16px;
+            border-radius: 35px;
+        }
+    }
+
+}
+
+.photo_content {
+    margin: 40px 0px 60px;
+}
+
+.photo_content_title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: clamp(18px, 3.5vw, 32px);
+    letter-spacing: 0.17em;
+    text-align: center;
+    color: #000;
+    text-align: center;
+}
+.photo_content_gallery{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 9px;
+    margin-bottom: 48px;
+    
+    @include small-tablet{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+
+    & li img{
+        max-width: 410px;
+        max-height: 279px;
+        width: 100%;
+        border-radius: 23px;
+        height: 100%;
+    }
+
+    & li.--big{
+        grid-column: 2 span;
+        grid-row: 2 span;
+
+        @media (max-width: 576px){
+            grid-column: unset;
+            grid-row: unset;
+        }
+
+        & img{
+            width: 100%;
+            height: 100%;
+            border-radius: 23px;
+            max-height: 570px;
+            max-width: 836px;
+        }
+    }
+    
+}
+.lightbox .lb-image{
+    border: none !important;
+    border-radius: 20px;
+}
+// .lb-data .lb-number {
+//     display: none !important;
+// }

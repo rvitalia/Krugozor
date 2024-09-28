@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/header.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/footer.css"> -->
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    
+    <title></title></head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header_top">
+                    <a href="" class="header_logo">
+                        <img src="./assets/images/header/Group95.svg" alt="logo" width="160" height="54">
+                    </a>
+        
+                    <form action="">
+                        <div class="header_form">
+                            <input type="text" id="searchInput" placeholder="Я хочу найти...">
+                            <button type="submit" class="btn-reset header_form_serch">
+                                <img src="https://via.placeholder.com/250x200" alt="search" width="21" height="21">
+                            </button>
+                        </div>
+                        <div class="dropdown" id="dropdown">
+                            <div class="dropdown-item">
+                                <img src="https://via.placeholder.com/250x200" alt="example1" class="dropdown-image">
+                                <div class="dropdown-content">
+                                    <h4>Заголовок 1</h4>
+                                    <p>Описание для первого пункта поиска.</p>
+                                </div>
+                            </div>
+                            <!-- и т.д -->
+                        </div>
+                    </form>
+                    <a href="" class="project_soc --accent">
+                        <img src="./assets/images/header/Telegram.svg" alt="Telegram" width="15" height="13">
+                    </a>
+                    <a href="" class="project_soc --accent">
+                        <img src="./assets/images/header/Vkontakte.svg" alt="Vkontakte" width="17" height="11">
+                    </a>
+                    <a href="" class="project_link --accent">+7(383)375 24 80</a>
+                    <a href="" class="project_link --border">Оплатить онлайн</a>
+                    <div class="burger-menu" id="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <nav class="header_bottom">
+                    <ul class="list-reset header_menu">
+                        <li class="selected"><a href="">О нас</a></li>
+                        <li><a href="">НАПРАВЛЕНИЯ</a></li>
+                        <li><a href="">СПЕЦИАЛИСТЫ</a></li>
+                        <li><a href="">МЕТОДЫ</a></li>
+                        <li><a href="">ДИАГНОСТИКА</a></li>
+                        <li><a href="">КОНСУЛЬТАЦИИ СПЕЦИАЛИСТОВ</a></li>
+                        <li><a href="">СТОИМОСТЬ</a></li>
+                        <li><a href="">КОНТАКТЫ</a></li>
+                        <li><a href="">РОДИТЕЛЯМ</a></li>
+                    </ul>
+                </nav>
+                <div class="header_mobile" id="header-mobile">
+                    <div class="img-wrap">
+                        <img src="./assets/images/header/logo.svg" alt="logo" width="211" height="70">
+                    </div>
+                    <ul class="header_mobile_menu list-reset">
+                        <li><a href="">О нас</a></li>
+                        <li><a href="">НАПРАВЛЕНИЯ</a></li>
+                        <li><a href="">СПЕЦИАЛИСТЫ</a></li>
+                        <li><a href="">МЕТОДЫ</a></li>
+                        <li><a href="">ДИАГНОСТИКА</a></li>
+                        <li><a href="">КОНСУЛЬТАЦИИ СПЕЦИАЛИСТОВ</a></li>
+                        <li><a href="">СТОИМОСТЬ</a></li>
+                        <li><a href="">КОНТАКТЫ</a></li>
+                        <li><a href="">РОДИТЕЛЯМ</a></li>
+                    </ul>
+                    <div class="flex-row">
+                        <a href=""><img src="./assets/images/header/vk.svg" alt="vk" width="34" height="34"></a>
+                        <a href=""><img src="./assets/images/header/TG.svg" alt="TG" width="34" height="34"></a>
+                    </div>
+                    <div class="content_wrap">
+                        <a class="header_mobile_link" href="">Оплатить онлайн</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            
+            <section class="section photo">
+                <div class="container">
+                    <h2 class="project_title-main  --accent">МЫ В ФОТО И ВИДЕО</h2>
+                    <div class="photo_content">
+                        <h4 class="photo_content_title">КАК ПРОХОДЯТ ЗАНЯТИЯ</h4>
+                        <ul class="list-reset photo_content_gallery">
+                            <li class="--big">
+                                <a href="./assets/images/photo/photo1.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo1.png" alt="photo" loading="lazy" width="836" height="570">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./assets/images/photo/photo2.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo2.png" alt="photo" loading="lazy" width="410" height="279">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./assets/images/photo/photo3.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo3.png" alt="photo" loading="lazy" width="410" height="279">
+                                </a>
+                            </li>
+                            <li class="--big">
+                                <a href="./assets/images/photo/photo1.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo1.png" alt="photo" loading="lazy" width="836" height="570">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./assets/images/photo/photo2.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo2.png" alt="photo" loading="lazy" width="410" height="279">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./assets/images/photo/photo3.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo3.png" alt="photo" loading="lazy" width="410" height="279">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="" class="project_link --darkblue">
+                            Посмотреть все фото
+                        </a>
+                    </div>
+                    <div class="photo_content">
+                        <h4 class="photo_content_title">КАК ПРОХОДЯТ ЗАНЯТИЯ</h4>
+                        <ul class="list-reset photo_content_gallery">
+                            <li class="--big">
+                                <a href="./assets/images/photo/photo1.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo1.png" alt="photo" loading="lazy" width="836" height="570">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./assets/images/photo/photo2.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo2.png" alt="photo" loading="lazy" width="410" height="279">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./assets/images/photo/photo3.png" data-lightbox="gallery">
+                                    <img src="./assets/images/photo/photo3.png" alt="photo" loading="lazy" width="410" height="279">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="" class="project_link --darkblue">
+                            Посмотреть все фото
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section video">
+                <div class="container">
+                    <h2 class="project_title">ВИДЕО</h2>
+                    <div class="video_container">
+                        <iframe width="720" height="405" src="https://rutube.ru/play/embed/07e58f8d3ea6737bb43e49d91a001dd3/"
+                            frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+                            allowFullScreen></iframe>
+                    </div>
+                    <div class="video_container">
+                        <iframe width="720" height="405" src="https://rutube.ru/play/embed/07e58f8d3ea6737bb43e49d91a001dd3/"
+                            frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+                            allowFullScreen></iframe>
+                    </div>
+                    <a href="" class="project_link --darkblue">
+                        Посмотреть все видео
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer section">
+            <div class="container container--fluid">
+                <div class="flex-row">
+                    <div class="footer_data">
+                        <a href="" class="footer_data_logo">
+                            <img src="./assets/images/footer/logo.svg" alt="logo" width="200" height="67" loading="lazy">
+                        </a>
+                        <a href="tel:+73833752480" class="footer_data_tel">+7(383)3752480</a>
+                        <div class="footer_social">
+                            <a href=""><img src="./assets/images/footer/Telegram.svg" width="25" height="25" alt="Telegram"></a>
+                            <a href=""><img src="./assets/images/footer/VK.svg" alt="VK" width="25" height="25"></a>
+                        </div>
+                    </div>
+                    <div class="footer_menu">
+                        <ul class="footer_menu_row list-reset">
+                            <li><a href="">Сведения об образовательной организации</a></li>
+                            <li><a href="">Благотворительные фонды</a></li>
+                        </ul>
+                        <div class="footer_menu_row">
+                            <div class="footer_menu_row_item">
+                                <span>
+                                    График работы: <br>
+                                    с 9:00до 20:00 <br>
+                                    ежедневно
+                                </span>
+                            </div>
+                            <ul class="footer_menu_row_item list-reset">
+                                <li><a href="">О нас</a></li>
+                                <li><a href="">Направления</a></li>
+                                <li><a href="">Спецалисты</a></li>
+                            </ul>
+                            <ul class="footer_menu_row_item list-reset">
+                                <li><a href="">Методы</a></li>
+                                <li><a href="">Диагностика</a></li>
+                                <li><a href="">Консультации</a></li>
+                            </ul>
+                            <ul class="footer_menu_row_item list-reset">
+                                <li><a href="">Стоимость</a></li>
+                                <li><a href="">Контакты</a></li>
+                                <li><a href="">Родителям</a></li>
+                            </ul>
+                            <ul class="footer_menu_row_item mobile list-reset">
+                                <li><a href="">О нас</a></li>
+                                <li><a href="">Направления</a></li>
+                                <li><a href="">Спецалисты</a></li>
+                                <li><a href="">Методы</a></li>
+                                <li><a href="">Диагностика</a></li>
+                            </ul>
+                            <ul class="footer_menu_row_item mobile list-reset">
+                                <li><a href="">Консультации</a></li>
+                                <li><a href="">Стоимость</a></li>
+                                <li><a href="">Контакты</a></li>
+                                <li><a href="">Родителям</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_mobile_data">
+                    <div class="footer_mobile_data_item">
+                        <span>
+                            График работы: <br>
+                            с 9:00до 20:00 ежедневно
+                        </span>
+                    </div>
+                    <div class="footer_mobile_social">
+                        <a href=""><img src="./assets/images/footer/Telegram.svg" width="25" height="25" alt="Telegram"></a>
+                        <a href=""><img src="./assets/images/footer/VK.svg" alt="VK" width="25" height="25"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const modal = document.querySelector('.modal');
+                const openModalBtn = document.querySelectorAll('.modal_open');
+                const closeModalBtn = document.querySelector('.modal_close');
+                const form = document.querySelector('.question_item_form');
+        
+                function addClass(button){
+                    if(button.classList.contains('--green')){
+                        modal.querySelector('.grid-row').classList.add('--green');
+                    }
+                }
+                
+                function removeClass(){
+                    modal.querySelector('.grid-row').classList.contains('--green') ?
+                    modal.querySelector('.grid-row').classList.remove('--green') : '';
+                }
+        
+                // Открытие модального окна
+                openModalBtn.forEach(element => {
+                    element.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        addClass(element);
+                        modal.classList.add('show');
+                    });
+                });
+        
+                // Закрытие модального окна
+                closeModalBtn.addEventListener('click', () => {
+                    modal.classList.remove('show');
+                    removeClass();
+                });
+        
+                // Закрытие модального окна при клике вне его содержимого
+                window.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        modal.classList.remove('show');
+                        removeClass();
+                    }
+                });
+                const body = document.body;
+                const inner = document.querySelector('.container'); // или другой элемент, в котором нужно вычислить ширину
+                const scrollBarWidth = window.innerWidth - body.clientWidth;
+                document.documentElement.style.setProperty('--scrollbar-width', `${scrollBarWidth}px`);
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                if(window.innerWidth < 1000){
+                    const header = document.querySelector('.header');
+                    const scrollThreshold = 100; // Задаем порог, ниже которого класс убирается
+            
+                    window.addEventListener('scroll', function () {
+                        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+                        if (currentScroll > scrollThreshold) {
+                            header.classList.add('active');
+                             this.document.body.style.paddingTop = '180px';
+                        } else {
+                            header.classList.remove('active');
+                            this.document.body.style.paddingTop = '0px';
+                        }
+                    });
+                }
+            });
+        
+        </script>
+    </div>
+    <!-- <script src="./assets/js/app.js"></script> -->
+    <script>
+        
+
+    </script>
+</body>
+
+</html>

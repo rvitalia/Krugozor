@@ -51,6 +51,7 @@ a {
   font-size: 14px;
   letter-spacing: 0.12em;
   text-align: center;
+  // font-family: var(--font-family);
 
   &.--accent {
     background-color: var(--accent-color);
@@ -112,6 +113,10 @@ a {
 .main {
   & .section.mar0 {
     margin-top: 0;
+  }
+
+  & .section:first-of-type{
+    margin-top: clamp(25px,6vw,50px);
   }
 }
 

@@ -18,9 +18,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    
     <title></title></head>
 
 <body>
@@ -34,10 +37,20 @@
         
                     <form action="">
                         <div class="header_form">
-                            <input type="text" placeholder="Я хочу найти...">
+                            <input type="text" id="searchInput" placeholder="Я хочу найти...">
                             <button type="submit" class="btn-reset header_form_serch">
-                                <img src="./assets/images/header/search.svg" alt="search" width="21" height="21">
+                                <img src="https://via.placeholder.com/250x200" alt="search" width="21" height="21">
                             </button>
+                        </div>
+                        <div class="dropdown" id="dropdown">
+                            <div class="dropdown-item">
+                                <img src="https://via.placeholder.com/250x200" alt="example1" class="dropdown-image">
+                                <div class="dropdown-content">
+                                    <h4>Заголовок 1</h4>
+                                    <p>Описание для первого пункта поиска.</p>
+                                </div>
+                            </div>
+                            <!-- и т.д -->
                         </div>
                     </form>
                     <a href="" class="project_soc --accent">
@@ -99,34 +112,19 @@
                     <div class="swiper-wrapper">
             
                         <div class="swiper-slide">
-                            <div class="hero_wrapper">
+                            <div class="hero_wrapper custom" style="background: var(--purpure-color);">
                                 <div class="container">
                                     <h2 class="project_title-main --white">ВЫЯСНИМ ПРИЧИНУ, <br> НАЙДЁМ РЕШЕНИЕ!</h2>
                                     <p class="hero_desc">Вам помогут опытные логопеды, психологи, дефектологи, неврологи</p>
                                     <a href="" class="project_link --gold">Записаться на консультацию</a>
-                                    <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546">
+                                    <!-- <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546"> -->
+                                    <img class="hero_boy custom_image" src="./assets/images/hero/total.png" alt="object" width="678" height="546">
                                 </div>
-                                <img class="hero_object" src="./assets/images/hero/OBJECTS.svg" alt="object" width="400"
-                                    height="440">
                             </div>
                             <a href="" class="project_link swiper_slide_mobile --purpure">Заказать обратный звонок</a>
                         </div>
             
-                        <div class="swiper-slide">
-                            <div class="hero_wrapper">
-                                <div class="container">
-                                    <h2 class="project_title-main --white h-reset">ВЫЯСНИМ ПРИЧИНУ, НАЙДЁМ РЕШЕНИЕ!</h2>
-                                    <p class="hero_desc h-reset">Вам помогут опытные логопеды, психологи, дефектологи, неврологи</p>
-                                    <a href="" class="project_link --gold">Записаться на консультацию</a>
-                                    <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546">
-                                </div>
-                                <img class="hero_object" src="./assets/images/hero/OBJECTS.svg" alt="object" width="400"
-                                    height="440">
-                            </div>
-                            <a href="" class="project_link swiper_slide_mobile --purpure">Заказать обратный звонок</a>
-                        </div>
-            
-            
+                    
             
                     </div>
                     <div class="swiper-pagination"></div>
@@ -188,6 +186,14 @@
                             </div>
                             <p class="h-reset">улучшение координации и работоспособности</p>
                             <a href="" class="project_link --white">подробнее</a>
+                        </li>
+                        <li class="--mobile">
+                            <a href="" class="project_link">Больше услуг
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 17L9 9L1 1" stroke="#0065B2" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -292,8 +298,7 @@
                                     </div>
                                     <svg class="accordion-icon" width="32" height="16" viewBox="0 0 32 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                        <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </div>
                                 <div class="accordion-content">
@@ -315,8 +320,7 @@
                                     </div>
                                     <svg class="accordion-icon" width="32" height="16" viewBox="0 0 32 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                        <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </div>
                                 <div class="accordion-content">
@@ -381,19 +385,19 @@
                             <div class="swiper">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
-                                  <!-- Slides -->
-                                  <div class="swiper-slide">Slide 1</div>
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">Slide 1</div>
                                 </div>
                                 <!-- If we need pagination -->
                                 <div class="swiper-pagination"></div>
-                              
+            
                                 <!-- If we need navigation buttons -->
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
-                              
+            
                                 <!-- If we need scrollbar -->
                                 <div class="swiper-scrollbar"></div>
-                              </div>
+                            </div>
                         </div>
                         <div class="tab-content" id="tab2">
                             <div id="map" style="width: 100%; height: 400px;"></div>
@@ -404,21 +408,50 @@
             
             <section class="question section">
                 <div class="container">
-                    <div class="grid-row">
+                    <div class="grid-row --accent">
                         <div class="question_item">
                             <img src="./assets/images/question/smartphone-with-call.svg" alt="smartphone-with-call" width="633" height="633" loading="lazy">
                         </div>
                         <div class="question_item">
                             <h2 class="project_title-main --white">ХОТИТЕ ЗАДАТЬ ВОПРОС?</h2>
                             <p>Свяжитесь с нами, чтобы получить консультацию или записаться к специалисту</p>
-                            <a href="" class="project_link --white">Заказать обратный звонок</a>
+                            <a href="" class="project_link --white modal_open --green">Заказать обратный звонок</a>
                         </div>
                     </div>
-                    <a href="" class="project_link swiper_slide_mobile --accent">Заказать обратный звонок</a>
+                    <a href="" class="project_link swiper_slide_mobile --accent modal_open">Заказать обратный звонок</a>
                 </div>
-            </section>        </main>
+            </section>
+            <div class="question modal">
+                <div class="container">
+                    <div class="grid-row">
+                        <div class="question_item">
+                            <img src="./assets/images/question/smartphone-with-call.svg" alt="smartphone-with-call" width="633" height="633" loading="lazy">
+                        </div>
+                        <div class="question_item">
+                            <form action="">
+                                    <div class="question_item_form">
+                                        <label for="">
+                                            Имя:
+                                            <input type="text" class="project_input">
+                                        </label>
+                                        <label for="">
+                                            Номер телефона:
+                                            <input type="tel" class="project_input" >
+                                        </label>
+                                        <label for="">
+                                            Комментарий:
+                                            <textarea class="project_textarea"></textarea>
+                                        </label>
+                                        <input type="submit" value="Отправить" class="project_submit">
+                                    </div>
+                                </form>
+                        </div>
+                        <span class="modal_close">&times;</span>
+                    </div>
+                </div>
+            </div>        </main>
         <footer class="footer section">
-            <div class="container">
+            <div class="container container--fluid">
                 <div class="flex-row">
                     <div class="footer_data">
                         <a href="" class="footer_data_logo">
@@ -488,11 +521,98 @@
                 </div>
             </div>
         </footer>
-
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const modal = document.querySelector('.modal');
+                const openModalBtn = document.querySelectorAll('.modal_open');
+                const closeModalBtn = document.querySelector('.modal_close');
+                const form = document.querySelector('.question_item_form');
+        
+                function addClass(button){
+                    if(button.classList.contains('--green')){
+                        modal.querySelector('.grid-row').classList.add('--green');
+                    }
+                }
+                
+                function removeClass(){
+                    modal.querySelector('.grid-row').classList.contains('--green') ?
+                    modal.querySelector('.grid-row').classList.remove('--green') : '';
+                }
+        
+                // Открытие модального окна
+                openModalBtn.forEach(element => {
+                    element.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        addClass(element);
+                        modal.classList.add('show');
+                    });
+                });
+        
+                // Закрытие модального окна
+                closeModalBtn.addEventListener('click', () => {
+                    modal.classList.remove('show');
+                    removeClass();
+                });
+        
+                // Закрытие модального окна при клике вне его содержимого
+                window.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        modal.classList.remove('show');
+                        removeClass();
+                    }
+                });
+                const body = document.body;
+                const inner = document.querySelector('.container'); // или другой элемент, в котором нужно вычислить ширину
+                const scrollBarWidth = window.innerWidth - body.clientWidth;
+                document.documentElement.style.setProperty('--scrollbar-width', `${scrollBarWidth}px`);
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                if(window.innerWidth < 1000){
+                    const header = document.querySelector('.header');
+                    const scrollThreshold = 100; // Задаем порог, ниже которого класс убирается
+            
+                    window.addEventListener('scroll', function () {
+                        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+                        if (currentScroll > scrollThreshold) {
+                            header.classList.add('active');
+                             this.document.body.style.paddingTop = '180px';
+                        } else {
+                            header.classList.remove('active');
+                            this.document.body.style.paddingTop = '0px';
+                        }
+                    });
+                }
+            });
+        
+        </script>
     </div>
-    <!-- <script src="assets/js/app.js"></script> -->
+    <!-- <script src="./assets/js/app.js"></script> -->
     <script>
-       document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("burger-menu"),t=document.getElementById("header-mobile");e.addEventListener("click",function(){e.classList.toggle("active"),t.classList.toggle("active")});var n=document.body;document.querySelector(".container"),n=window.innerWidth-n.clientWidth,document.documentElement.style.setProperty("--scrollbar-width",n+"px")}),document.addEventListener("DOMContentLoaded",function(){new Swiper(".swiper-intro",{slidesPerView:1,spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}}),new Swiper(".swiper-photo",{slidesPerView:4,centeredSlides:!0,spaceBetween:20,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},breakpoints:{320:{slidesPerView:1,spaceBetween:10,centeredSlides:!0},570:{slidesPerView:1.5,spaceBetween:30,centeredSlides:!1},640:{slidesPerView:2,spaceBetween:25},1024:{slidesPerView:3,spaceBetween:25},1200:{slidesPerView:4,spaceBetween:25}}})}),document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".accordion-header").forEach(e=>{e.addEventListener("click",function(){var e,t=this.parentElement,n=t.querySelector(".accordion-content"),i=n.scrollHeight;t.classList.contains("active")?(t.classList.remove("active"),n.style.maxHeight=null):((e=document.querySelector(".accordion-item.active"))&&(e.classList.remove("active"),e.querySelector(".accordion-content").style.maxHeight=null),t.classList.add("active"),n.style.maxHeight=i+"px")})})}),ymaps.ready(function(){new ymaps.Map("map",{center:[55.76,37.64],zoom:10})}),document.addEventListener("DOMContentLoaded",function(){const i=document.querySelectorAll(".tab-btn"),c=document.querySelectorAll(".tab-content");i.forEach(n=>{n.addEventListener("click",()=>{i.forEach(e=>e.classList.remove("active")),c.forEach(e=>{e.classList.remove("active"),e.style.display="none"}),n.classList.add("active");const e=n.getAttribute("data-tab"),t=document.getElementById(e);t.style.display="block",setTimeout(()=>t.classList.add("active"),10)})})});
+        document.addEventListener("DOMContentLoaded", function () { const e = document.getElementById("burger-menu"), t = document.getElementById("header-mobile"); e.addEventListener("click", function () { e.classList.toggle("active"), t.classList.toggle("active") }); var n = document.body; document.querySelector(".container"), n = window.innerWidth - n.clientWidth, document.documentElement.style.setProperty("--scrollbar-width", n + "px") }), document.addEventListener("DOMContentLoaded", function () { new Swiper(".swiper-intro", { slidesPerView: 1, spaceBetween: 10, pagination: { el: ".swiper-pagination", clickable: !0 }, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" } }), new Swiper(".swiper-photo", { slidesPerView: 4, centeredSlides: !0, spaceBetween: 20, loop: !0, pagination: { el: ".swiper-pagination", clickable: !0 }, breakpoints: { 320: { slidesPerView: 1, spaceBetween: 10, centeredSlides: !0 }, 570: { slidesPerView: 1.5, spaceBetween: 30, centeredSlides: !1 }, 640: { slidesPerView: 2, spaceBetween: 25 }, 1024: { slidesPerView: 3, spaceBetween: 25 }, 1200: { slidesPerView: 4, spaceBetween: 25 } } }) }), document.addEventListener("DOMContentLoaded", function () { document.querySelectorAll(".accordion-header").forEach(e => { e.addEventListener("click", function () { var e, t = this.parentElement, n = t.querySelector(".accordion-content"), i = n.scrollHeight; t.classList.contains("active") ? (t.classList.remove("active"), n.style.maxHeight = null) : ((e = document.querySelector(".accordion-item.active")) && (e.classList.remove("active"), e.querySelector(".accordion-content").style.maxHeight = null), t.classList.add("active"), n.style.maxHeight = i + "px") }) }) }), ymaps.ready(function () { new ymaps.Map("map", { center: [55.76, 37.64], zoom: 10 }) }), document.addEventListener("DOMContentLoaded", function () { const i = document.querySelectorAll(".tab-btn"), c = document.querySelectorAll(".tab-content"); i.forEach(n => { n.addEventListener("click", () => { i.forEach(e => e.classList.remove("active")), c.forEach(e => { e.classList.remove("active"), e.style.display = "none" }), n.classList.add("active"); const e = n.getAttribute("data-tab"), t = document.getElementById(e); t.style.display = "block", setTimeout(() => t.classList.add("active"), 10) }) }) });
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const searchInput = document.getElementById("searchInput");
+            const dropdown = document.getElementById("dropdown");
+            const form = document.querySelector(".header_form");
+
+            // Показать выпадающий список при фокусе на поле ввода
+            searchInput.addEventListener("focus", function () {
+                form.classList.add("open");
+                setTimeout(() => {
+                    dropdown.style.transform = 'rotateX(0)';
+                }, 300);
+            });
+
+            // Скрыть выпадающий список при потере фокуса
+            searchInput.addEventListener("blur", function () {
+                dropdown.style.transform = 'rotateX(-90deg)';
+                setTimeout(() => form.classList.remove("open"), 500); // Задержка для выбора элемента
+            });
+
+        });
+
     </script>
 </body>
 

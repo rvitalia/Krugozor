@@ -1,0 +1,232 @@
+.question.modal {
+    & .grid-row {
+        background: #009bf0;
+        border-radius: 30px;
+        padding: 40px 60px 70px 0;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        position: relative;
+
+        &.--green {
+            background-color: var(--green-color);
+        }
+
+        @media (max-width:1250px) {
+            position: static;
+        }
+
+        @include tablet {
+            padding: 38px 20px;
+        }
+
+        @include small-tablet {
+            grid-template-columns: unset;
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+        }
+
+        & .question_item:first-of-type {
+            width: 100%;
+            height: 100%;
+
+            @media (max-width:1250px) {
+                position: relative;
+            }
+
+            @media (max-width:480px) {
+                min-height: unset;
+            }
+
+            & img {
+                position: absolute;
+                top: -96px;
+                left: -5px;
+                bottom: -21px;
+                z-index: 1;
+
+                @media (max-width:1250px) {
+                    max-width: 450px;
+                }
+
+                @include tablet {
+                    max-width: 422px;
+                    left: -60px;
+                }
+
+                @include small-tablet {
+                    bottom: unset;
+                    top: unset;
+                    left: unset;
+                    position: static;
+                    max-width: 100%;
+                }
+
+                @include mobile {
+                    margin-top: -30px;
+                    position: relative;
+                    right: calc(0px - clamp(20px, 9vw, 80px));
+                    min-width: 430px;
+                }
+
+                @media (max-width:480px) {
+                    right: -70px;
+                    position: absolute;
+                    margin-top: -40px;
+                }
+            }
+
+        }
+    }
+}
+.modal {
+
+        display: none; /* По умолчанию скрыто */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный фон */
+        opacity: 0; /* Начальная непрозрачность */
+        transition: opacity 0.4s ease; /* Плавный переход */
+        align-items: center;
+        
+        & .container{
+            animation: slide-down 0.4s ease; /* Анимация появления сверху */
+        }
+
+        & .question_item{
+            & img{
+                @media (max-width: 1250px) {
+                    top: 0 !important;
+                    bottom: 0 !important;
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+        }
+
+        & .question_item_form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            & label {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 120%;
+                letter-spacing: 0.11em;
+                color: #fff;
+            }
+
+        }
+
+        & .project_submit{
+
+            @include small-tablet{
+                position: absolute;
+                top: calc(100% + 13px);
+                left: 0;
+                right: 0;
+                display: block;
+                width: 100%;
+                padding: 22.5px 0;
+                color: white;
+            }
+
+            &.--accent{
+                background-color: var(--accent-color);
+            }
+            &.--green{
+                background-color: var(--green-color);
+            }
+
+        }
+    }
+
+.project_input {
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: clamp(14px, 3vw ,20px);
+    line-height: 120%;
+    letter-spacing: 0.11em;
+    color: black;
+    border: none;
+    padding: 8.5px 15px;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.project_textarea {
+    resize: none;
+    font-size: clamp(14px, 3vw ,20px);
+    line-height: 120%;
+    letter-spacing: 0.11em;
+    color: black;
+    border: none;
+    padding: 8.5px 15px;
+    border-radius: 20px;
+    height: 100vh;
+    max-height: 93px;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.project_submit{
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    color: #000;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+/* Анимация для контента */
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Стиль для кнопки закрытия */
+.modal_close {
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+/* Стиль для открытого модального окна */
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+body:has(.modal.show){
+    overflow: hidden;
+    padding-right: var(--scrollbar-width);
+}

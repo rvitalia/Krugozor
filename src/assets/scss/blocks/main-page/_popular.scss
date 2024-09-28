@@ -4,7 +4,7 @@
         margin-bottom: clamp(20px, 4vw, 36px);
     }
 
-    & .title_wrapper{
+    & .title_wrapper {
         flex-grow: 1;
         display: flex;
         align-items: flex-end;
@@ -17,7 +17,7 @@
     gap: 11px;
     grid-template-columns: repeat(auto-fit, minmax(241px, 1fr));
 
-    @include mobile{
+    @include mobile {
         grid-template-columns: 1fr;
     }
 
@@ -28,12 +28,13 @@
         flex-direction: column;
         align-items: center;
         gap: 18px;
-        
-        @include mobile{
+
+        @include mobile {
             display: grid;
             grid-template-columns: 76px 1fr;
             gap: 22px;
             row-gap: 6px;
+            position: relative;
         }
 
         &.--accent {
@@ -56,6 +57,47 @@
             background-color: var(--purpure-color);
         }
 
+        &.--mobile {
+            display: none;
+
+            @include mobile {
+                margin: 12px 0 21px;
+                display: block;
+            }
+
+            & .project_link {
+                font-family: var(--font-family);
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 46%;
+                letter-spacing: 0.11em;
+                text-align: center;
+                color: var(--darkblue-color);
+                border: 2px solid var(--darkblue-color);
+                border-radius: 35px;
+                opacity: 1;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+                padding: 25px 0;
+                transition: all 0.3s linear;
+
+                & path{
+                    transition: stroke 0.3s linear;
+                }
+
+                &:hover{
+                    color: white;
+                    background-color: var(--darkblue-color);
+
+                    & path{
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+
         & p {
             font-family: var(--font-family);
             font-weight: 700;
@@ -66,38 +108,43 @@
             flex-grow: 1;
             margin: 0 -26px;
 
-            @include mobile{
+            @include mobile {
                 text-align: left;
                 margin: 0;
             }
 
         }
 
-        & .img-wrap{
+        & .img-wrap {
             max-height: 94px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            @include mobile{
+            @include mobile {
                 order: -1;
                 grid-row: 2 span;
             }
 
-            & img{
+            & img {
                 max-height: 100%;
                 object-fit: contain;
             }
         }
 
-        & .project_link{
+        & .project_link {
             margin-top: auto;
             flex-shrink: 0;
             margin-top: -8px;
 
-            @include mobile{
-                display: none;
+            @include mobile {
+                // display: none;
+                font-size: 0;
+                opacity: 0;
+                z-index: 1;
+                position: absolute;
+                inset: 0;
             }
         }
     }
@@ -112,7 +159,7 @@
     color: #fff;
     margin: 0;
 
-    @include mobile{
+    @include mobile {
         text-align: left;
     }
 }

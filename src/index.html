@@ -8,34 +8,19 @@ title: Кругозор
         <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-                <div class="hero_wrapper">
+                <div class="hero_wrapper custom" style="background: var(--purpure-color);">
                     <div class="container">
                         <h2 class="project_title-main --white">ВЫЯСНИМ ПРИЧИНУ, <br> НАЙДЁМ РЕШЕНИЕ!</h2>
                         <p class="hero_desc">Вам помогут опытные логопеды, психологи, дефектологи, неврологи</p>
                         <a href="" class="project_link --gold">Записаться на консультацию</a>
-                        <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546">
+                        <!-- <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546"> -->
+                        <img class="hero_boy custom_image" src="./assets/images/hero/total.png" alt="object" width="678" height="546">
                     </div>
-                    <img class="hero_object" src="./assets/images/hero/OBJECTS.svg" alt="object" width="400"
-                        height="440">
                 </div>
                 <a href="" class="project_link swiper_slide_mobile --purpure">Заказать обратный звонок</a>
             </div>
 
-            <div class="swiper-slide">
-                <div class="hero_wrapper">
-                    <div class="container">
-                        <h2 class="project_title-main --white h-reset">ВЫЯСНИМ ПРИЧИНУ, НАЙДЁМ РЕШЕНИЕ!</h2>
-                        <p class="hero_desc h-reset">Вам помогут опытные логопеды, психологи, дефектологи, неврологи</p>
-                        <a href="" class="project_link --gold">Записаться на консультацию</a>
-                        <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546">
-                    </div>
-                    <img class="hero_object" src="./assets/images/hero/OBJECTS.svg" alt="object" width="400"
-                        height="440">
-                </div>
-                <a href="" class="project_link swiper_slide_mobile --purpure">Заказать обратный звонок</a>
-            </div>
-
-
+        
 
         </div>
         <div class="swiper-pagination"></div>
@@ -98,6 +83,14 @@ title: Кругозор
                 <p class="h-reset">улучшение координации и работоспособности</p>
                 <a href="" class="project_link --white">подробнее</a>
             </li>
+            <li class="--mobile">
+                <a href="" class="project_link">Больше услуг
+                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 17L9 9L1 1" stroke="#0065B2" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </li>
         </ul>
     </div>
 </section>
@@ -136,8 +129,7 @@ title: Кругозор
                         </div>
                         <svg class="accordion-icon" width="32" height="16" viewBox="0 0 32 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <div class="accordion-content">
@@ -159,8 +151,7 @@ title: Кругозор
                         </div>
                         <svg class="accordion-icon" width="32" height="16" viewBox="0 0 32 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1 1L16 15L31 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <div class="accordion-content">
@@ -225,19 +216,19 @@ title: Кругозор
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="swiper-slide">Slide 1</div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
-                  
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-                  
+
                     <!-- If we need scrollbar -->
                     <div class="swiper-scrollbar"></div>
-                  </div>
+                </div>
             </div>
             <div class="tab-content" id="tab2">
                 <div id="map" style="width: 100%; height: 400px;"></div>
@@ -247,3 +238,5 @@ title: Кругозор
 </section>
 
 {{> question}}
+
+{{> modal}}

@@ -6,6 +6,7 @@
     & li {
         padding-left: 10px;
         padding-right: 10px;
+        position: relative;
 
         &.--regular {
             grid-column: 4 span;
@@ -36,6 +37,13 @@
         &.--rose {
             background-color: var(--rose-color);
             color: white;
+        }
+
+        & a::after{
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            content: '';
         }
     }
 }

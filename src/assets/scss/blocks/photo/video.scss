@@ -1,0 +1,43 @@
+.video_container {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 (это высота в процентах от ширины) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Можно указать фон для контейнера */
+    border-radius: 43px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    @include small-tablet{
+        border-radius: 20px;
+        min-height: 525px;
+    }
+}
+
+.video_container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.video {
+    & .project_title{
+        margin-bottom: 40px;
+    }
+
+    & .project_link{
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-width: 348px;
+
+        @include mobile{
+            padding: 21px 16px;
+            border-radius: 35px;
+        }
+    }
+}

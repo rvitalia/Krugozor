@@ -34,6 +34,32 @@
             }
         }
 
+        & .hero_wrapper{
+            & .hero_desc + .project_link{
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            & .container{
+                @include tablet{
+                    height: 100%;
+                }
+            }
+
+            & .hero_boy{
+                @include tablet{
+                    margin-top: auto;
+                }
+            }
+
+            & .project_title-main{
+                @include tablet{
+                    margin-bottom: 44px;
+                }
+            }
+        }
+
         & .hero_wrapper.--orange {
             background-color: var(--orange-color);
             position: relative;

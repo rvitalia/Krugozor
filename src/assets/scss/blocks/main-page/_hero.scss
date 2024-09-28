@@ -13,17 +13,31 @@
     & .swiper-pagination-bullet-active {
         background-color: #ddd;
     }
+
 }
 
 .hero_wrapper {
     border-radius: 0 0 0 100px;
-    background: var(--purpure-color);
+    
     position: relative;
+
+    &.custom {
+        &>.container{
+            @include small-tablet{
+                min-height: unset;
+            }
+        }
+    }
 
     &>.container {
         padding: 100px 55px 90px;
         min-height: 532px;
         position: relative;
+
+        & *:not(img){
+            position: relative;
+            z-index: 2;
+        }
 
         @include tablet{
             padding-left: 22px;
@@ -43,6 +57,17 @@
         @include mobile{
             text-align: left;
         }
+    }
+
+    & .project_link{
+        width: 100%;
+        max-width: 481px;
+        display: flex;
+        justify-content: center;
+
+        // @include tablet{
+        //     max-width: 300px;
+        // }
     }
 
     & .project_link.--gold{
@@ -90,6 +115,17 @@
 
     @include mobile{
         max-width: 340px;
+    }
+
+    &.custom_image{
+        max-height: 80%;
+        object-fit: contain;
+        object-position: right;
+        z-index: 0;
+
+        @include tablet{
+            object-position: center right;
+        }
     }
 }
 

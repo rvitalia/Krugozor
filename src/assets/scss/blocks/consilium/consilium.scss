@@ -9,6 +9,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
 
             @include small-tablet {
                 grid-column: 3 span;
@@ -20,6 +21,13 @@
                 font-size: clamp(18px, 2.5vw, 24px);
                 letter-spacing: 0.17em;
                 text-align: center;
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    inset: 0;
+                    z-index: 1;
+                }
 
                 & img {
                     object-fit: contain;
@@ -99,6 +107,20 @@
 
             &.--accent {
                 background-color: var(--accent-color);
+
+                & a {
+                    color: #fff;
+                }
+            }
+            &.--gold {
+                background-color: var(--gold-color);
+
+                & a {
+                    color: #000;
+                }
+            }
+            &.--rose {
+                background-color: var(--rose-color);
 
                 & a {
                     color: #fff;

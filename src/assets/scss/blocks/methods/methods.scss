@@ -92,6 +92,12 @@
             }
         }
         .content-wrap{
+
+            font-weight: 400;
+            font-size: clamp(15px, 3vw, 24px);
+            letter-spacing: 0.03em;
+            color: #000;
+
             @include small-tablet{
                 grid-column: 2 span;
             }

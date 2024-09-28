@@ -3,11 +3,11 @@
         margin-top: 55px;
 
         & .grid-row {
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 251px));
             gap: 11px;
             padding-bottom: 80px;
-            
-            @include mobile{
+
+            @media (max-width: 600px) {
                 grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
                 gap: 24px;
                 row-gap: 35px;
@@ -39,16 +39,16 @@
     & .specialist_item {
         background: #0065b2;
         border-radius: 80px 30px 30px 30px;
-        
+
         display: flex;
         flex-direction: column;
         padding-bottom: 16px;
-        
+
         @include mobile {
             position: relative;
             margin-bottom: 51px;
         }
-        
+
         & .img-wrap {
             border-radius: 80px 30px 0 0;
             margin-bottom: 7px;
@@ -57,11 +57,19 @@
 
             & img {
                 width: 100%;
-
+                max-height: 250px;
+                object-position: top;
+                border-radius: 80px 30px 0 0;
                 // @include mobile{
                 //     max-height: ;
                 // }
             }
+        }
+    }
+
+    @media (max-width:768px) {
+        .specialists .specialist_item .img-wrap img {
+            max-height: 190px;
         }
     }
 
@@ -81,7 +89,7 @@
         padding-right: 20px;
         padding-left: 20px;
 
-        @include small-mobile{
+        @include small-mobile {
             padding-left: 10px;
             padding-right: 10px;
         }
@@ -144,7 +152,7 @@
             transform: rotate(-90deg);
             // stroke: #fff;
             flex-shrink: 0;
-            transition:  transform 0.3s linear;
+            transition: transform 0.3s linear;
         }
     }
 

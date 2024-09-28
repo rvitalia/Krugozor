@@ -9,6 +9,17 @@
         grid-template-columns: repeat(12, 1fr);
         gap: 14px;
 
+        & li{
+            position: relative;
+
+            & a::after{
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+            }
+        }
+
         & li.--accent {
             background-color: var(--accent-color);
         }

@@ -18,9 +18,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    
     <title></title></head>
 
 <body>
@@ -34,10 +37,20 @@
         
                     <form action="">
                         <div class="header_form">
-                            <input type="text" placeholder="Я хочу найти...">
+                            <input type="text" id="searchInput" placeholder="Я хочу найти...">
                             <button type="submit" class="btn-reset header_form_serch">
-                                <img src="./assets/images/header/search.svg" alt="search" width="21" height="21">
+                                <img src="https://via.placeholder.com/250x200" alt="search" width="21" height="21">
                             </button>
+                        </div>
+                        <div class="dropdown" id="dropdown">
+                            <div class="dropdown-item">
+                                <img src="https://via.placeholder.com/250x200" alt="example1" class="dropdown-image">
+                                <div class="dropdown-content">
+                                    <h4>Заголовок 1</h4>
+                                    <p>Описание для первого пункта поиска.</p>
+                                </div>
+                            </div>
+                            <!-- и т.д -->
                         </div>
                     </form>
                     <a href="" class="project_soc --accent">
@@ -118,7 +131,7 @@
             </section>
         </main>
         <footer class="footer section">
-            <div class="container">
+            <div class="container container--fluid">
                 <div class="flex-row">
                     <div class="footer_data">
                         <a href="" class="footer_data_logo">
@@ -188,7 +201,72 @@
                 </div>
             </div>
         </footer>
-
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const modal = document.querySelector('.modal');
+                const openModalBtn = document.querySelectorAll('.modal_open');
+                const closeModalBtn = document.querySelector('.modal_close');
+                const form = document.querySelector('.question_item_form');
+        
+                function addClass(button){
+                    if(button.classList.contains('--green')){
+                        modal.querySelector('.grid-row').classList.add('--green');
+                    }
+                }
+                
+                function removeClass(){
+                    modal.querySelector('.grid-row').classList.contains('--green') ?
+                    modal.querySelector('.grid-row').classList.remove('--green') : '';
+                }
+        
+                // Открытие модального окна
+                openModalBtn.forEach(element => {
+                    element.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        addClass(element);
+                        modal.classList.add('show');
+                    });
+                });
+        
+                // Закрытие модального окна
+                closeModalBtn.addEventListener('click', () => {
+                    modal.classList.remove('show');
+                    removeClass();
+                });
+        
+                // Закрытие модального окна при клике вне его содержимого
+                window.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        modal.classList.remove('show');
+                        removeClass();
+                    }
+                });
+                const body = document.body;
+                const inner = document.querySelector('.container'); // или другой элемент, в котором нужно вычислить ширину
+                const scrollBarWidth = window.innerWidth - body.clientWidth;
+                document.documentElement.style.setProperty('--scrollbar-width', `${scrollBarWidth}px`);
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                if(window.innerWidth < 1000){
+                    const header = document.querySelector('.header');
+                    const scrollThreshold = 100; // Задаем порог, ниже которого класс убирается
+            
+                    window.addEventListener('scroll', function () {
+                        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+                        if (currentScroll > scrollThreshold) {
+                            header.classList.add('active');
+                             this.document.body.style.paddingTop = '180px';
+                        } else {
+                            header.classList.remove('active');
+                            this.document.body.style.paddingTop = '0px';
+                        }
+                    });
+                }
+            });
+        
+        </script>
     </div>
     <!-- <script src="assets/js/app.js"></script> -->
      <script>
