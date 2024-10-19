@@ -1,7 +1,8 @@
 .maps {
     position: relative;
-    @media (max-width:1050px){
-        margin-bottom: calc(95px + clamp(25px,6vw,90px));
+
+    @media (max-width:1050px) {
+        margin-bottom: calc(95px + clamp(25px, 6vw, 90px));
     }
 
 
@@ -12,13 +13,15 @@
         margin-left: -40px;
         margin-right: -40px;
 
-        @include for-desktop{
+        @include for-desktop {
             margin-left: 0;
             margin-right: 0;
         }
 
         @media (max-width:1050px) {
-            grid-template-columns: 1fr;
+            // grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
         }
 
         & .maps_inner {
@@ -32,7 +35,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    padding: 40px 20px 15px;
+                    padding: 40px 20px 15px 35px;
 
                     & .project_link {
                         position: absolute;
@@ -60,7 +63,7 @@
                 @include mobile {
                     align-items: flex-start;
 
-                    & .project_link{
+                    & .project_link {
                         margin-left: 20px;
                         margin-right: 20px;
                     }
@@ -85,7 +88,13 @@
             font-size: clamp(18px, 2vw, 26px);
             letter-spacing: 0.17em;
             color: #fff;
-            margin-bottom: 20px;
+            margin-top: 55px;
+            // margin-bottom: 20px;
+
+            &:first-of-type {
+                margin-top: 0;
+                margin-bottom: 25px;
+            }
 
             @include tablet {
                 font-size: clamp(18px, 2.8vw, 26px);
@@ -93,10 +102,13 @@
 
             @include mobile {
                 font-weight: 700;
+                margin-top: 30px;
             }
         }
 
         & .maps_inner ul {
+            padding: 0;
+            margin: 0;
             font-weight: 500;
             font-size: clamp(16px, 2vw, 26px);
             line-height: 157%;
@@ -115,8 +127,35 @@
                 text-align: left;
             }
 
-            &+.maps_title {
-                margin-top: 35px;
+            // &+.maps_title {
+            //     margin-top: 35px;
+            // }
+
+            & li {
+                margin-bottom: 25px;
+
+                & dl {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                & dt {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: clamp(16px, 3.5vw, 26px);
+                    line-height: 137%;
+                    letter-spacing: 0.12em;
+                    color: #fff;
+                }
+
+                & dd {
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: clamp(14px, 3.5vw, 20px);
+                    line-height: 137%;
+                    letter-spacing: 0.12em;
+                    color: #fff;
+                }
             }
         }
 
@@ -137,7 +176,7 @@
         }
 
         & .project_link {
-            margin-top: 40px;
+            margin-top: 55px;
             display: block;
             max-width: 363px;
             text-align: center;

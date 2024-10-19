@@ -23,6 +23,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.min.js"></script>
     
     <title></title></head>
 
@@ -215,45 +216,49 @@
         </footer>
         
         <script>
+            // обший код
             document.addEventListener('DOMContentLoaded', () => {
                 const modal = document.querySelector('.modal');
-                const openModalBtn = document.querySelectorAll('.modal_open');
-                const closeModalBtn = document.querySelector('.modal_close');
-                const form = document.querySelector('.question_item_form');
-        
-                function addClass(button){
-                    if(button.classList.contains('--green')){
-                        modal.querySelector('.grid-row').classList.add('--green');
+                if(modal){
+                    const openModalBtn = document.querySelectorAll('.modal_open');
+                    const closeModalBtn = document.querySelector('.modal_close');
+                    const form = document.querySelector('.question_item_form');
+            
+                    function addClass(button){
+                        console.log(button.dataset.green)
+                        if(button.dataset.green){
+                            modal.querySelector('.grid-row').classList.add('--green');
+                        }
                     }
-                }
-                
-                function removeClass(){
-                    modal.querySelector('.grid-row').classList.contains('--green') ?
-                    modal.querySelector('.grid-row').classList.remove('--green') : '';
-                }
-        
-                // Открытие модального окна
-                openModalBtn.forEach(element => {
-                    element.addEventListener('click', (event) => {
-                        event.preventDefault();
-                        addClass(element);
-                        modal.classList.add('show');
+                    
+                    function removeClass(){
+                        modal.querySelector('.grid-row').classList.contains('--green') ?
+                        modal.querySelector('.grid-row').classList.remove('--green') : '';
+                    }
+            
+                    // Открытие модального окна
+                    openModalBtn.forEach(element => {
+                        element.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            addClass(element);
+                            modal.classList.add('show');
+                        });
                     });
-                });
-        
-                // Закрытие модального окна
-                closeModalBtn.addEventListener('click', () => {
-                    modal.classList.remove('show');
-                    removeClass();
-                });
-        
-                // Закрытие модального окна при клике вне его содержимого
-                window.addEventListener('click', (event) => {
-                    if (event.target === modal) {
+            
+                    // Закрытие модального окна
+                    closeModalBtn.addEventListener('click', () => {
                         modal.classList.remove('show');
                         removeClass();
-                    }
-                });
+                    });
+            
+                    // Закрытие модального окна при клике вне его содержимого
+                    window.addEventListener('click', (event) => {
+                        if (event.target === modal) {
+                            modal.classList.remove('show');
+                            removeClass();
+                        }
+                    });
+                }
                 const body = document.body;
                 const inner = document.querySelector('.container'); // или другой элемент, в котором нужно вычислить ширину
                 const scrollBarWidth = window.innerWidth - body.clientWidth;
@@ -277,7 +282,8 @@
                     });
                 }
             });
-        
+            
+        // конец общего кода
         </script>
     </div>
     <!-- <script src="assets/js/app.js"></script> -->

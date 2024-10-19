@@ -23,6 +23,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.min.js"></script>
     
     <title></title></head>
 
@@ -107,7 +108,7 @@
         </header>
         <main class="main">
             
-            <section class="hero section mar0 price">
+            <!-- <section class="hero section mar0 price">
                 <div class="swiper swiper-hero swiper-intro">
                     <div class="swiper-wrapper">
             
@@ -155,10 +156,10 @@
                                     <img src="./assets/images/price/total.png" alt="boy"
                                         class="hero_boy custom_image" width="560" height="477">
                                 </div>
-                                <!-- <img class="hero_object" src="./assets/images/price/Maskgroup.svg" alt="object" width="400"
+                             <img class="hero_object" src="./assets/images/price/Maskgroup.svg" alt="object" width="400"
                                     height="440">
                                 <img class="hero_object --mobile" src="./assets/images/price/Maskgroup2.svg" alt="object"
-                                    width="397" height="366"> -->
+                                    width="397" height="366"> 
                             </div>
                             <a href="" class="project_link swiper_slide_mobile --rose">Перейти к заполнению</a>
                         </div>
@@ -170,8 +171,57 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-            </section>
+            </section> -->
             
+            <section class="hero section mar0">
+                <div class="swiper swiper-hero swiper-intro">
+                    <div class="swiper-wrapper">
+            
+                        <div class="swiper-slide">
+                            <div class="hero_wrapper custom" style="background: var(--purpure-color);">
+                                <div class="container">
+                                    <h2 class="project_title-main --white">ВЫЯСНИМ ПРИЧИНУ, <br> НАЙДЁМ РЕШЕНИЕ!</h2>
+                                    <p class="hero_desc">Вам помогут опытные логопеды, психологи, дефектологи, неврологи</p>
+                                    <a href="" class="project_link" style="background-color: var(--gold-color);">Записаться на консультацию</a>
+                                    <!-- <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546"> -->
+                                    <img class="hero_boy custom_image" src="./assets/images/hero/total.png" alt="object" width="678" height="546">
+                                </div>
+                            </div>
+                            <a href="" class="project_link swiper_slide_mobile" style="background: var(--purpure-color);">Заказать обратный звонок</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hero_wrapper custom" style="background: var(--rose-color);">
+                                <div class="container">
+                                    <h2 class="project_title-main --white">ВЫЯСНИМ ПРИЧИНУ, <br> НАЙДЁМ РЕШЕНИЕ!</h2>
+                                    <p class="hero_desc">Вам помогут опытные логопеды, психологи, дефектологи, неврологи</p>
+                                    <a href="" class="project_link" style="background-color: #fff;">Записаться на консультацию</a>
+                                    <!-- <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546"> -->
+                                    <img class="hero_boy custom_image" src="./assets/images/hero/calculator.png" alt="object" width="678" height="546">
+                                </div>
+                            </div>
+                            <a href="" class="project_link swiper_slide_mobile" style="background: var(--rose-color);">Заказать обратный звонок</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hero_wrapper custom" style="background: var(--purpure-color);">
+                                <div class="container">
+                                    <h2 class="project_title-main --white">ВЫЯСНИМ ПРИЧИНУ, <br> НАЙДЁМ РЕШЕНИЕ!</h2>
+                                    <p class="hero_desc">Вам помогут опытные логопеды, психологи, дефектологи, неврологи</p>
+                                    <a href="" class="project_link" style="background-color: #fff;">Записаться на консультацию</a>
+                                    <!-- <img src="./assets/images/hero/old-boy.png" alt="boy" class="hero_boy" width="546" height="546"> -->
+                                    <img class="hero_boy custom_image" src="./assets/images/hero/family1.png" alt="object" width="678" height="546">
+                                </div>
+                            </div>
+                            <a href="" class="project_link swiper_slide_mobile" style="background: var(--purpure-color);">Заказать обратный звонок</a>
+                        </div>
+            
+                    
+            
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
             
             <section class="section cost">
                 <div class="container">
@@ -184,13 +234,13 @@
                             </label>
             
                             <select name="" id="direction" class="form_input">
-                                <option value="Направление">Направление</option>
+                                <option value="" disabled selected>Направление</option>
                                 <option value="Направление">Направление</option>
                                 <option value="Направление">Направление</option>
                             </select>
             
                             <select name="" id="specialist" class="form_input">
-                                <option value="Специалист">Специалист</option>
+                                <option value="" disabled selected>Специалист</option>
                                 <option value="Специалист">Специалист</option>
                                 <option value="Специалист">Специалист</option>
                             </select>
@@ -306,45 +356,49 @@
         </footer>
         
         <script>
+            // обший код
             document.addEventListener('DOMContentLoaded', () => {
                 const modal = document.querySelector('.modal');
-                const openModalBtn = document.querySelectorAll('.modal_open');
-                const closeModalBtn = document.querySelector('.modal_close');
-                const form = document.querySelector('.question_item_form');
-        
-                function addClass(button){
-                    if(button.classList.contains('--green')){
-                        modal.querySelector('.grid-row').classList.add('--green');
+                if(modal){
+                    const openModalBtn = document.querySelectorAll('.modal_open');
+                    const closeModalBtn = document.querySelector('.modal_close');
+                    const form = document.querySelector('.question_item_form');
+            
+                    function addClass(button){
+                        console.log(button.dataset.green)
+                        if(button.dataset.green){
+                            modal.querySelector('.grid-row').classList.add('--green');
+                        }
                     }
-                }
-                
-                function removeClass(){
-                    modal.querySelector('.grid-row').classList.contains('--green') ?
-                    modal.querySelector('.grid-row').classList.remove('--green') : '';
-                }
-        
-                // Открытие модального окна
-                openModalBtn.forEach(element => {
-                    element.addEventListener('click', (event) => {
-                        event.preventDefault();
-                        addClass(element);
-                        modal.classList.add('show');
+                    
+                    function removeClass(){
+                        modal.querySelector('.grid-row').classList.contains('--green') ?
+                        modal.querySelector('.grid-row').classList.remove('--green') : '';
+                    }
+            
+                    // Открытие модального окна
+                    openModalBtn.forEach(element => {
+                        element.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            addClass(element);
+                            modal.classList.add('show');
+                        });
                     });
-                });
-        
-                // Закрытие модального окна
-                closeModalBtn.addEventListener('click', () => {
-                    modal.classList.remove('show');
-                    removeClass();
-                });
-        
-                // Закрытие модального окна при клике вне его содержимого
-                window.addEventListener('click', (event) => {
-                    if (event.target === modal) {
+            
+                    // Закрытие модального окна
+                    closeModalBtn.addEventListener('click', () => {
                         modal.classList.remove('show');
                         removeClass();
-                    }
-                });
+                    });
+            
+                    // Закрытие модального окна при клике вне его содержимого
+                    window.addEventListener('click', (event) => {
+                        if (event.target === modal) {
+                            modal.classList.remove('show');
+                            removeClass();
+                        }
+                    });
+                }
                 const body = document.body;
                 const inner = document.querySelector('.container'); // или другой элемент, в котором нужно вычислить ширину
                 const scrollBarWidth = window.innerWidth - body.clientWidth;
@@ -368,13 +422,28 @@
                     });
                 }
             });
-        
+            
+        // конец общего кода
         </script>
     </div>
     <!-- <script src="assets/js/app.js"></script> -->
     <script>
-       document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("burger-menu"),t=document.getElementById("header-mobile");e.addEventListener("click",function(){e.classList.toggle("active"),t.classList.toggle("active")});var n=document.body;document.querySelector(".container"),n=window.innerWidth-n.clientWidth,document.documentElement.style.setProperty("--scrollbar-width",n+"px")}),document.addEventListener("DOMContentLoaded",function(){new Swiper(".swiper-intro",{slidesPerView:1,spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})});
-    </script>
+       document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("burger-menu"),t=document.getElementById("header-mobile");e.addEventListener("click",function(){e.classList.toggle("active"),t.classList.toggle("active")});var n=document.body;document.querySelector(".container"),n=window.innerWidth-n.clientWidth,document.documentElement.style.setProperty("--scrollbar-width",n+"px")}),document.addEventListener("DOMContentLoaded",function(){new Swiper(".swiper-intro",{slidesPerView:1,autoplay: { delay: 2000,  },spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})});
+       document.addEventListener('DOMContentLoaded', function() {
+        const selectsElement = document.querySelectorAll('select');
+        selectsElement.forEach(element => {
+            // Меняем цвет текста на черный при выборе опции
+            console.log(element);
+            element.addEventListener('change', function() {
+                if (element.value) {
+                    element.style.color = '#000'; // Меняем цвет текста на черный
+                }
+            });
+        });
+
+});
+
+   </script>
 </body>
 
 </html>

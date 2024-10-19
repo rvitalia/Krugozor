@@ -47,17 +47,16 @@
         }
 
         & .img-wrap {
-            border-radius: 80px 30px 0 0;
+            // border-radius: 80px 30px 0 0;
             margin-bottom: 7px;
             overflow: hidden;
             width: 100%;
 
             & img {
                 width: 100%;
-
-                // @include mobile{
-                //     max-height: ;
-                // }
+                max-height: 250px;
+                object-position: top;
+                border-radius: 80px 30px 0 0;
             }
         }
     }
@@ -197,6 +196,8 @@
                 letter-spacing: 0.03em;
                 text-align: right;
                 color: #0065b2;
+                flex-shrink: 0;
+                margin-left: 10px;
 
                 @include small-tablet {
                     font-size: 16px;

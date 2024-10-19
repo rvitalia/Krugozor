@@ -8,6 +8,12 @@
 
         &.--green {
             background-color: var(--green-color);
+
+            @include small-tablet{
+                & .project_submit{
+                    background-color: var(--green-color);
+                }
+            }
         }
 
         @media (max-width:1250px) {
@@ -24,6 +30,7 @@
             flex-direction: column-reverse;
             position: relative;
         }
+
 
         & .question_item:first-of-type {
             width: 100%;
@@ -130,6 +137,8 @@
 
         & .project_submit{
 
+            // background-color: #fff;
+
             @include small-tablet{
                 position: absolute;
                 top: calc(100% + 13px);
@@ -139,6 +148,7 @@
                 width: 100%;
                 padding: 22.5px 0;
                 color: white;
+                background-color: var(--accent-color);
             }
 
             &.--accent{

@@ -25,6 +25,12 @@
             padding-bottom: 0;
         }
 
+        & .swiper_slide_mobile {
+            @include small-tablet{
+                background-color: var(--accent-color);
+            }
+        }
+
         & .question_item:first-of-type {
             width: 100%;
             height: 100%;
@@ -103,7 +109,7 @@
             text-align: center;
             max-width: 591px;
 
-            @include mobile{
+            @include small-tablet{
                 display: none;
             }
         }
